@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+    <title>IRSC Mumbai | Inter-Religious Solidarity Council</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'irsc-purple': '#4c1d95',
+                        'irsc-slate': '#475569',
+                        'irsc-cyan': '#0e7490',
+                        'irsc-amber': '#d97706',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #scrollAction {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        #scrollAction.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #mainNavBtn {
+            transition: opacity 0.3s ease;
+        }
+
+        #mainNavBtn.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Mobile Menu Logic */
+        #menu-toggle:checked~#mobile-menu {
+            display: flex;
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body class="bg-[#fdfbf7] text-slate-900 font-sans leading-relaxed">
+
+    <div id="scrollAction" class="fixed bottom-6 right-6 z-[100]">
+        <a href="donate.html"
+            class="flex items-center justify-center w-14 h-14 bg-orange-600 text-white rounded-full shadow-2xl hover:bg-indigo-900 transition-colors group">
+            <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        </a>
+    </div>
+
+    <div
+        class="bg-orange-600 text-white py-2.5 px-4 text-center text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-black sticky top-0 z-50 shadow-md">
+        <span class="inline-block animate-pulse mr-2 text-white">●</span>
+        Latest Statement: <span class="hidden sm:inline">Safeguarding Mumbai's Pluralist Heritage.</span>
+        <a href="media.html" class="underline ml-2 hover:text-indigo-900 transition-colors">Read Press Release</a>
+    </div>
+
+    <nav class="bg-white/90 backdrop-blur-md border-b sticky top-[38px] z-40">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
+                        class="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col">
+                        <span
+                            class="font-serif text-xl md:text-2xl font-black text-irsc-purple leading-none">IRSC</span>
+                        <span
+                            class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-irsc-cyan mt-1">Inter-Religious
+                            Solidarity Council</span>
+                    </div>
+                </a>
+            </div>
+
+            <div
+                class="hidden lg:flex gap-8 items-center text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
+                <!-- <a href="index.html" class="text-orange-600 border-b-2 border-orange-600 pb-1">Home</a> -->
+
+                <a href="about.html" class="hover:text-orange-600 transition-colors">About</a>
+                <a href="programs.html" class="hover:text-orange-600 transition-colors">Programs</a>
+
+                <a href="events.html" class="hover:text-orange-600 transition-colors">Events</a>
+
+                <a href="gallery.html" class="hover:text-orange-600 transition-colors">Gallery</a>
+                <!-- <a href="media.html" class="hover:text-orange-600 transition-colors">Media</a> -->
+                <a href="reports.html" class="hover:text-orange-600 transition-colors">Transparency</a>
+
+                <div id="mainNavBtn">
+                    <a href="donate.html"
+                        class="bg-indigo-950 text-white px-8 py-3.5 rounded-full hover:bg-orange-600 transition-all shadow-lg">Support
+                        Us</a>
+                </div>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="lg:hidden cursor-pointer flex flex-col gap-1 w-6">
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+            </label>
+
+            <div id="mobile-menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b flex-col p-6 gap-6 lg:hidden shadow-xl text-[12px] font-black uppercase tracking-widest text-slate-600">
+                <a href="index.html" class="text-orange-600">Home</a>
+                <a href="about.html" class="hover:text-orange-600">About</a>
+                <a href="programs.html" class="hover:text-orange-600">Programs</a>
+                <a href="events.html" class="hover:text-orange-600">Events</a> <a href="gallery.html"
+                    class="hover:text-orange-600">Gallery</a>
+                <!-- <a href="media.html" class="hover:text-orange-600">Media</a> -->
+                <a href="reports.html" class="hover:text-orange-600">Transparency</a>
+                <a href="donate.html" class="bg-orange-600 text-white py-4 rounded-xl text-center">Support Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative py-20 lg:py-32 px-6 overflow-hidden bg-indigo-950">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1570161834225-336340f69902?auto=format&fit=crop&q=80&w=2000"
+                class="w-full h-full object-cover" alt="Mumbai Cityscape">
+        </div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div class="text-white">
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-8xl leading-[1.1] mb-10">Unity in Diversity is <span
+                        class="text-orange-500 italic">Practice.</span></h1>
+                <p class="text-lg md:text-xl text-indigo-100/80 mb-12 leading-relaxed max-w-xl font-light">
+                    As a Section 8 collective, we bridge the gaps between Mumbai’s diverse faith communities through
+                    active crisis intervention and economic cooperation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5">
+                    <a href="about.html"
+                        class="bg-orange-600 text-center px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white hover:text-orange-600 transition-all shadow-xl">Our
+                        Mission</a>
+                    <a href="programs.html"
+                        class="border border-white/30 text-center px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-white/10 transition-all">View
+                        Initiatives</a>
+                </div>
+            </div>
+            <div class="relative hidden lg:block">
+                <div
+                    class="aspect-[4/5] bg-slate-800 rounded-[3rem] shadow-2xl overflow-hidden border-[12px] border-white/5 relative">
+                    <img src="./images/home-images.jpg" alt="Mumbai Interfaith Dialogue"
+                        class="w-full h-full object-cover grayscale-0 transition-all duration-1000">
+                    <div
+                        class="absolute bottom-10 left-10 bg-white/95 backdrop-blur p-6 rounded-2xl shadow-2xl max-w-xs">
+                        <p class="text-xs font-black text-orange-600 uppercase tracking-widest mb-2">Live Impact</p>
+                        <p class="text-irsc-purple font-serif text-lg leading-tight italic">"Building communal
+                            resilience where it matters most: at the neighborhood level."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="py-16 md:py-24 max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-b border-slate-100">
+        <div class="space-y-2">
+            <div class="text-4xl md:text-5xl font-serif font-black text-irsc-purple">24+</div>
+            <div class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Municipal Wards
+            </div>
+        </div>
+        <div class="space-y-2">
+            <div class="text-4xl md:text-5xl font-serif font-black text-irsc-purple">8</div>
+            <div class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Represented
+                Faiths</div>
+        </div>
+        <div class="space-y-2">
+            <div class="text-4xl md:text-5xl font-serif font-black text-irsc-purple">1.2k+</div>
+            <div class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Peace Marshals
+            </div>
+        </div>
+        <div class="space-y-2">
+            <div class="text-4xl md:text-5xl font-serif font-black text-irsc-purple">100%</div>
+            <div class="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Transparency
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8 text-center md:text-left">
+                <div class="max-w-2xl">
+                    <h2 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-600 mb-4">Strategic
+                        Framework</h2>
+                    <h3 class="font-serif text-4xl md:text-5xl text-irsc-purple">How we protect the peace.</h3>
+                </div>
+                <p class="text-slate-500 max-w-xs text-sm leading-relaxed">Our work is professionalized de-escalation.
+                    We combine legal expertise with community trust.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-irsc-purple text-white rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-4">The Peace Command</h4>
+                    <p class="text-slate-500 text-sm mb-6">A 24/7 hotline and rapid-response network of community
+                        leaders trained in conflict resolution.</p>
+                    <a href="programs.html"
+                        class="text-[10px] font-black uppercase tracking-widest text-irsc-cyan">Learn More &rarr;</a>
+                </div>
+
+                <div
+                    class="p-8 md:p-10 rounded-[2.5rem] bg-indigo-900 text-white shadow-2xl md:transform md:-translate-y-8">
+                    <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-4">Pluralist Literacy</h4>
+                    <p class="text-white/70 text-sm mb-6">Educational workshops focusing on constitutional values and
+                        the history of Indian pluralism.</p>
+                    <a href="programs.html"
+                        class="text-[10px] font-black uppercase tracking-widest text-orange-500">View Curriculum
+                        &rarr;</a>
+                </div>
+
+                <div
+                    class="p-8 md:p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-irsc-cyan text-white rounded-2xl flex items-center justify-center mb-8">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-serif text-2xl mb-4">Livelihood Bonds</h4>
+                    <p class="text-slate-500 text-sm mb-6">Creating inter-faith business co-ops where shared financial
+                        interest creates communal stability.</p>
+                    <a href="impact.html" class="text-[10px] font-black uppercase tracking-widest text-irsc-cyan">Case
+                        Studies &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-indigo-950 py-24 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-16 border-b border-white/10 pb-20">
+            <div class="col-span-2">
+                <div class="flex items-center gap-4 mb-8">
+                    <img src="IRSC logo.png" alt="Logo" class="h-10 w-10 brightness-200">
+                    <h5 class="font-serif text-2xl font-black">IRSC Mumbai</h5>
+                </div>
+                <p class="text-white/50 text-lg max-w-sm italic font-serif leading-relaxed">
+                    "Upholding the constitutional dignity of every citizen through the collective will of the people."
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8 col-span-2 md:grid-cols-2">
+                <div>
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 mb-8">Explore</h6>
+                    <ul class="space-y-4 text-sm font-bold opacity-80">
+                        <li><a href="about.html" class="hover:text-orange-500">Governance</a></li>
+                        <li><a href="impact.html" class="hover:text-orange-500">Impact Data</a></li>
+                        <li><a href="media.html" class="hover:text-orange-500">Press Room</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 mb-8">Legal</h6>
+                    <div
+                        class="bg-white/5 p-4 rounded-xl border border-white/10 text-[10px] font-bold opacity-60 leading-relaxed uppercase tracking-widest">
+                        Section 8 NGO<br>
+                        PAN: AAATI2890C<br>
+                        80G Tax Exempt
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] opacity-40 gap-4">
+            <p>© 2026 Inter-Religious Solidarity Council</p>
+            <p>Made in Mumbai for India</p>
+        </div>
+    </footer>
+
+    <script>
+        const mainNavBtn = document.getElementById('mainNavBtn');
+        const scrollAction = document.getElementById('scrollAction');
+
+        window.addEventListener('scroll', () => {
+            const scrollValue = window.scrollY;
+
+            if (scrollValue > 150) {
+                mainNavBtn?.classList.add('hide');
+                scrollAction?.classList.add('show');
+            } else {
+                mainNavBtn?.classList.remove('hide');
+                scrollAction?.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap"
+        rel="stylesheet">
+    <title>Gallery | IRSC Mumbai</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'irsc-purple': '#4c1d95',
+                        'irsc-cyan': '#0e7490',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #scrollAction {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        #scrollAction.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #mainNavBtn {
+            transition: opacity 0.3s ease;
+        }
+
+        #mainNavBtn.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #menu-toggle:checked~#mobile-menu {
+            display: flex;
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked~label .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-[#fdfbf7] text-slate-900 font-sans leading-relaxed">
+
+    <div id="scrollAction" class="fixed bottom-6 right-6 z-[100]">
+        <a href="donate.html"
+            class="flex items-center justify-center w-14 h-14 bg-orange-600 text-white rounded-full shadow-2xl hover:bg-indigo-950 transition-colors group">
+            <svg class="w-6 h-6 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="bg-orange-600 text-white py-2.5 px-4 text-center text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-black sticky top-0 z-50">
+        Mumbai in Focus: Solidarity in every street
+    </div>
+
+    <nav class="bg-white/90 backdrop-blur-md border-b sticky top-[38px] z-40">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
+                        class="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl md:text-2xl font-black text-irsc-purple leading-none">IRSC</span>
+                        <span class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-irsc-cyan mt-1">Inter-Religious Solidarity Council</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex gap-8 items-center text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
+                <!-- <a href="index.html" class="hover:text-orange-600 transition-colors">Home</a> -->
+                <a href="about.html" class="hover:text-orange-600 transition-colors">About</a>
+                <a href="programs.html" class="hover:text-orange-600 transition-colors">Programs</a>
+                <a href="events.html" class="hover:text-orange-600 transition-colors">Events</a>
+                <a href="gallery.html" class="text-orange-600 border-b-2 border-orange-600 pb-1">Gallery</a>
+                <a href="reports.html" class="hover:text-orange-600 transition-colors">Transparency</a>
+
+                <div id="mainNavBtn">
+                    <a href="donate.html"
+                        class="bg-indigo-950 text-white px-8 py-3.5 rounded-full hover:bg-orange-600 transition-all shadow-lg">Support Us</a>
+                </div>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="lg:hidden cursor-pointer flex flex-col gap-1 w-6">
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+                <span class="hamburger-line w-full h-0.5 bg-irsc-purple transition-all duration-300"></span>
+            </label>
+
+            <div id="mobile-menu"
+                class="hidden absolute top-full left-0 w-full bg-white border-b flex-col p-6 gap-6 lg:hidden shadow-xl text-[12px] font-black uppercase tracking-widest text-slate-600">
+                <a href="index.html" class="hover:text-orange-600">Home</a>
+                <a href="about.html" class="hover:text-orange-600">About</a>
+                <a href="programs.html" class="hover:text-orange-600">Programs</a>
+                <a href="events.html" class="hover:text-orange-600">Events</a>
+                <a href="gallery.html" class="text-orange-600">Gallery</a>
+                <a href="reports.html" class="hover:text-orange-600">Transparency</a>
+                <a href="donate.html" class="bg-orange-600 text-white py-4 rounded-xl text-center">Support Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h1 class="font-serif text-5xl md:text-7xl text-irsc-purple mb-6">Witnessing <span
+                    class="text-orange-600 italic">Solidarity.</span></h1>
+            <p class="text-slate-500 max-w-2xl text-lg">A visual record of our work across Mumbai's municipal wards—from peace marches to livelihood training.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mb-12">
+            <button class="px-6 py-2 bg-irsc-purple text-white rounded-full text-[10px] font-black uppercase tracking-widest">All Work</button>
+            <button class="px-6 py-2 bg-white border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-slate-50 transition-colors">Peace Command</button>
+            <button class="px-6 py-2 bg-white border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-slate-50 transition-colors">Workshops</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="gallery-item relative overflow-hidden rounded-[2rem] aspect-square group cursor-pointer bg-slate-200">
+                <img src="images/gallery-1.jpg" alt="Interfaith Meeting" class="w-full h-full object-cover transition-transform duration-700">
+                <div class="overlay absolute inset-0 bg-indigo-950/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 mb-2">Dialogues</span>
+                    <h4 class="font-serif text-xl">Interfaith Holi-Easter-Ramadan</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-[2rem] aspect-[4/5] md:row-span-2 group cursor-pointer bg-slate-200">
+                <img src="images/gallery-2.jpeg" alt="Peace Marshals" class="w-full h-full object-cover transition-transform duration-700">
+                <div class="overlay absolute inset-0 bg-indigo-950/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 mb-2">On Ground</span>
+                    <h4 class="font-serif text-xl">IRSC Advisory Committee Meeting</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-[2rem] aspect-square group cursor-pointer bg-slate-200">
+                <img src="images/gallery-3.jpg" alt="Livelihood Bonds" class="w-full h-full object-cover transition-transform duration-700">
+                <div class="overlay absolute inset-0 bg-indigo-950/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 mb-2">Livelihood</span>
+                    <h4 class="font-serif text-xl">Prayer Meeting for Peace</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-[2rem] aspect-square group cursor-pointer bg-slate-200">
+                <img src="images/gallery-4.jpeg" alt="Constitutional Literacy" class="w-full h-full object-cover transition-transform duration-700">
+                <div class="overlay absolute inset-0 bg-indigo-950/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 mb-2">Education</span>
+                    <h4 class="font-serif text-xl">Love - The Essence of All Religions</h4>
+                </div>
+            </div>
+
+            <div class="gallery-item relative overflow-hidden rounded-[2rem] aspect-video lg:col-span-2 group cursor-pointer bg-slate-200">
+                <img src="images/gallery-5.jpg" alt="Community Relief" class="w-full h-full object-cover transition-transform duration-700">
+                <div class="overlay absolute inset-0 bg-indigo-950/80 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-8 text-white">
+                    <span class="text-[9px] font-black uppercase tracking-widest text-orange-500 mb-2">Impact</span>
+                    <h4 class="font-serif text-xl">A Pathway to Peace and Harmony</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-indigo-950 py-24 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-16 border-b border-white/10 pb-20">
+            <div class="col-span-2">
+                <div class="flex items-center gap-4 mb-8">
+                    <img src="IRSC logo.png" alt="Logo" class="h-10 w-10 brightness-200">
+                    <h5 class="font-serif text-2xl font-black">IRSC Mumbai</h5>
+                </div>
+                <p class="text-white/50 text-lg max-w-sm italic font-serif leading-relaxed">
+                    "Capturing the resilience of Mumbai's pluralistic soul."
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-8 col-span-2">
+                <div>
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 mb-8">Navigation</h6>
+                    <ul class="space-y-4 text-sm font-bold opacity-80">
+                        <li><a href="index.html" class="hover:text-orange-500 transition-colors">Home</a></li>
+                        <li><a href="events.html" class="hover:text-orange-500 transition-colors">Events</a></li>
+                        <li><a href="reports.html" class="hover:text-orange-500 transition-colors">Transparency</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 mb-8">Legal</h6>
+                    <div class="bg-white/5 p-4 rounded-xl border border-white/10 text-[10px] font-bold opacity-60 leading-relaxed uppercase tracking-widest">
+                        Section 8 NGO<br>
+                        80G Tax Exempt
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 py-10 text-[10px] font-black uppercase tracking-[0.2em] opacity-40">
+            © 2026 Inter-Religious Solidarity Council
+        </div>
+    </footer>
+
+    <script>
+        const mainNavBtn = document.getElementById('mainNavBtn');
+        const scrollAction = document.getElementById('scrollAction');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 150) {
+                mainNavBtn?.classList.add('hide');
+                scrollAction?.classList.add('show');
+            } else {
+                mainNavBtn?.classList.remove('hide');
+                scrollAction?.classList.remove('show');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
+</body>
+
+</html>
