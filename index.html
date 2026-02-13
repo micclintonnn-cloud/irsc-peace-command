@@ -253,6 +253,7 @@
                     <a href="about.html" class="hover:text-[#800000] transition-all">About</a>
                     <a href="programs.html" class="hover:text-[#800000] transition-all">Programs</a>
                     <a href="events.html" class="hover:text-[#800000] transition-all">Events</a>
+                    <a href="gallery.html" class="hover:text-[#800000] transition-all">Gallery</a>
                     <a href="reports.html" class="hover:text-[#800000] transition-all">Transparency</a>
                     <a href="donate.html"
                         class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
@@ -291,10 +292,9 @@
         <input type="checkbox" id="menu-toggle" class="peer hidden">
 
         <div id="mobile-menu"
-            class="fixed inset-0 z-[150] translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-center justify-center">
+            class="fixed inset-0 z-[150] translate-x-full pointer-events-none peer-checked:translate-x-0 peer-checked:pointer-events-auto transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-center justify-center">
 
-            <div
-                class="absolute inset-0 bg-slate-950/80 backdrop-blur-xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)]">
+            <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-xl">
             </div>
 
             <div
@@ -312,10 +312,16 @@
 
             <div class="relative z-10 flex flex-col items-center w-full max-w-sm px-6">
                 <div class="flex flex-col items-center gap-6 mb-12">
+                    <a href="index.html"
+                        class="group relative text-3xl font-serif font-bold tracking-tight text-white transition-all duration-300">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-full h-0.5 bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.5)]"></span>
+                    </a>
                     <a href="about.html"
                         class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">About
                         <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-500 group-hover:w-full"></span></a>
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span></a>
                     <a href="programs.html"
                         class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">Programs
                         <span
@@ -346,14 +352,6 @@
                     </span>
                 </a>
 
-                <style>
-                    @keyframes shimmer {
-                        100% {
-                            transform: translateX(100%);
-                        }
-                    }
-                </style>
-
                 <div class="flex flex-col items-center mt-12 w-full">
                     <div class="h-px w-12 bg-white/20 mb-10"></div>
                     <div class="flex gap-4 items-center justify-center">
@@ -379,11 +377,20 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="mt-8 text-[10px] text-white/30 uppercase tracking-[0.4em] font-black text-center">Mumbai
-                        Solidarity 2026</p>
+                    <p class="mt-8 text-[10px] text-white/30 uppercase tracking-[0.4em] font-black text-center">
+                        Mumbai Solidarity 2026
+                    </p>
                 </div>
             </div>
         </div>
+
+        <style>
+            @keyframes shimmer {
+                100% {
+                    transform: translateX(100%);
+                }
+            }
+        </style>
     </header>
 
     <div id="scrollAction" class="fixed bottom-6 right-6 z-[100]">
@@ -539,7 +546,7 @@
             class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-indigo-50 rounded-full blur-[100px] opacity-60 -z-10">
         </div>
 
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto py-20 px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
 
                 <div class="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
@@ -554,15 +561,52 @@
                             Updates</span>
                     </div>
 
-                    <div class="space-y-3">
-                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                            Real-time impact, <br>
-                            <span class="text-indigo-600">Rooted in Mumbai.</span>
-                        </h2>
-                        <p class="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-md">
-                            Our Live Hub tracks every milestone. Transparency isn't just a value—it's the foundation of
-                            solidarity.
-                        </p>
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h2 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tighter">
+                                <span class="text-slate-900">Real-time impact,</span><br>
+
+                                <span class="relative inline-block mt-2">
+                                    <span class="absolute inset-0 text-indigo-500 blur-xl opacity-20 select-none"
+                                        aria-hidden="true"
+                                        style="-webkit-text-stroke: 3px currentColor; color: transparent;">
+                                        Rooted in Mumbai.
+                                    </span>
+                                    <span
+                                        class="relative text-transparent transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(79,70,229,0.5)]"
+                                        style="-webkit-text-stroke: 1.8px #4f46e5;">
+                                        Rooted in Mumbai.
+                                    </span>
+                                </span>
+                            </h2>
+
+                            <div class="relative pl-8">
+                                <div
+                                    class="absolute left-0 top-1 bottom-1 w-[2.5px] bg-indigo-500 shadow-[0_0_12px_rgba(79,70,229,0.6)] rounded-full">
+                                </div>
+
+                                <p class="text-base md:text-lg text-slate-500 font-medium leading-relaxed max-w-md">
+                                    Our <span class="text-slate-900 font-bold">Live Hub</span> tracks every milestone.
+                                    Transparency isn't just a value—it's the foundation of <span
+                                        class="text-slate-800 underline decoration-indigo-200 decoration-2 underline-offset-4">solidarity</span>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="px-3 py-1.5 rounded-xl border border-emerald-500/20 bg-white 
+                    shadow-[0_0_15px_rgba(16,185,129,0.08),inset_0_0_10px_rgba(16,185,129,0.03)] 
+                    flex items-center gap-2.5">
+                                <span class="relative flex h-2 w-2">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                </span>
+                                <span
+                                    class="text-[10px] font-black uppercase tracking-[0.15em] text-emerald-600">Syncing
+                                    Node_01</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-center gap-4">
@@ -591,9 +635,9 @@
                     </div>
 
                     <div
-                        class="bg-white/80 backdrop-blur-2xl border border-slate-200/50 rounded-[2.5rem] p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(79,70,229,0.1)] transition-all duration-500">
+                        class="bg-white/80 backdrop-blur-2xl border border-slate-200/50 rounded-[2.5rem] p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(79,70,229,0.08)] transition-all duration-500">
 
-                        <div class="flex justify-between items-center mb-6">
+                        <div class="flex justify-between items-center mb-8">
                             <div>
                                 <h3 class="text-2xl font-bold text-slate-800 tracking-tight">Activity Feed</h3>
                                 <div class="flex items-center gap-2 mt-1">
@@ -602,8 +646,8 @@
                                             class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                     </span>
-                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Live
-                                        Updates</p>
+                                    <p class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">Live Hub
+                                    </p>
                                 </div>
                             </div>
                             <div
@@ -612,21 +656,24 @@
                             </div>
                         </div>
 
-                        <div class="space-y-3 max-h-[420px] overflow-y-auto pr-3 custom-scrollbar">
+                        <div class="space-y-4 max-h-[400px] overflow-y-auto pr-3 custom-scrollbar">
 
                             <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-emerald-50/30 transition-all duration-500 border border-transparent hover:border-emerald-100 hover:shadow-[0_10px_30px_-10px_rgba(16,185,129,0.2)]">
+                                class="group flex items-center gap-5 p-4 rounded-[2rem] hover:bg-slate-50/50 transition-all duration-500 border border-transparent">
                                 <div
-                                    class="w-12 h-12 shrink-0 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center bg-white border-2 border-emerald-500/30 
+                                    shadow-[0_0_15px_rgba(16,185,129,0.15),inset_0_0_8px_rgba(16,185,129,0.1)] 
+                                    group-hover:border-emerald-500 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4),inset_0_0_10px_rgba(16,185,129,0.2)] transition-all duration-500">
+                                    <svg class="w-6 h-6 text-emerald-600 drop-shadow-[0_0_3px_rgba(16,185,129,0.4)]"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                                             d="M12 21a6 6 0 006-6c0-4-6-9-6-9s-6 5-6 9a6 6 0 006 6z" />
                                     </svg>
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex justify-between items-start">
                                         <span
-                                            class="px-2 py-0.5 rounded-md bg-emerald-100/50 text-emerald-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Sustainability</span>
+                                            class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Sustainability</span>
                                         <span class="text-[9px] font-medium text-slate-400">2h ago</span>
                                     </div>
                                     <p class="text-slate-700 font-semibold text-sm leading-snug">Clean water
@@ -635,18 +682,21 @@
                             </div>
 
                             <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-orange-50/30 transition-all duration-500 border border-transparent hover:border-orange-100 hover:shadow-[0_10px_30px_-10px_rgba(249,115,22,0.2)]">
+                                class="group flex items-center gap-5 p-4 rounded-[2rem] hover:bg-slate-50/50 transition-all duration-500 border border-transparent">
                                 <div
-                                    class="w-12 h-12 shrink-0 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center bg-white border-2 border-orange-500/30 
+                                    shadow-[0_0_15px_rgba(249,115,22,0.15),inset_0_0_8px_rgba(249,115,22,0.1)] 
+                                    group-hover:border-orange-500 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4),inset_0_0_10px_rgba(249,115,22,0.2)] transition-all duration-500">
+                                    <svg class="w-6 h-6 text-orange-600 drop-shadow-[0_0_3px_rgba(249,115,22,0.4)]"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                                             d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5z" />
                                     </svg>
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex justify-between items-start">
                                         <span
-                                            class="px-2 py-0.5 rounded-md bg-orange-100/50 text-orange-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Capacity</span>
+                                            class="px-2 py-0.5 rounded-md bg-orange-50 text-orange-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Capacity</span>
                                         <span class="text-[9px] font-medium text-slate-400">5h ago</span>
                                     </div>
                                     <p class="text-slate-700 font-semibold text-sm leading-snug">Summit registration
@@ -655,18 +705,21 @@
                             </div>
 
                             <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-indigo-50/30 transition-all duration-500 border border-transparent hover:border-indigo-100 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.2)]">
+                                class="group flex items-center gap-5 p-4 rounded-[2rem] hover:bg-slate-50/50 transition-all duration-500 border border-transparent">
                                 <div
-                                    class="w-12 h-12 shrink-0 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(79,70,229,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center bg-white border-2 border-indigo-500/30 
+                                    shadow-[0_0_15px_rgba(79,70,229,0.15),inset_0_0_8px_rgba(79,70,229,0.1)] 
+                                    group-hover:border-indigo-500 group-hover:shadow-[0_0_20px_rgba(79,70,229,0.4),inset_0_0_10px_rgba(79,70,229,0.2)] transition-all duration-500">
+                                    <svg class="w-6 h-6 text-indigo-600 drop-shadow-[0_0_3px_rgba(79,70,229,0.4)]"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                                             d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857" />
                                     </svg>
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex justify-between items-start">
                                         <span
-                                            class="px-2 py-0.5 rounded-md bg-indigo-100/50 text-indigo-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Network</span>
+                                            class="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Network</span>
                                         <span class="text-[9px] font-medium text-slate-400">12h ago</span>
                                     </div>
                                     <p class="text-slate-700 font-semibold text-sm leading-snug">50 new peace
@@ -675,71 +728,35 @@
                             </div>
 
                             <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-cyan-50/30 transition-all duration-500 border border-transparent hover:border-cyan-100 hover:shadow-[0_10px_30px_-10px_rgba(6,182,212,0.2)]">
+                                class="group flex items-center gap-5 p-4 rounded-[2rem] hover:bg-slate-50/50 transition-all duration-500 border border-transparent">
                                 <div
-                                    class="w-12 h-12 shrink-0 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center group-hover:bg-cyan-600 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    class="w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center bg-white border-2 border-cyan-500/30 
+                                    shadow-[0_0_15px_rgba(6,182,212,0.15),inset_0_0_8px_rgba(6,182,212,0.1)] 
+                                    group-hover:border-cyan-500 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4),inset_0_0_10px_rgba(6,182,212,0.2)] transition-all duration-500">
+                                    <svg class="w-6 h-6 text-cyan-600 drop-shadow-[0_0_3px_rgba(6,182,212,0.4)]"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                                             d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1" />
                                     </svg>
                                 </div>
                                 <div class="flex-1">
                                     <div class="flex justify-between items-start">
                                         <span
-                                            class="px-2 py-0.5 rounded-md bg-cyan-100/50 text-cyan-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Justice</span>
+                                            class="px-2 py-0.5 rounded-md bg-cyan-50 text-cyan-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Justice</span>
                                         <span class="text-[9px] font-medium text-slate-400">Yesterday</span>
                                     </div>
                                     <p class="text-slate-700 font-semibold text-sm leading-snug">Pro bono legal clinic
-                                        resolved 12 neighborhood land disputes.</p>
+                                        resolved 12 neighborhood disputes.</p>
                                 </div>
                             </div>
 
-                            <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-rose-50/30 transition-all duration-500 border border-transparent hover:border-rose-100 hover:shadow-[0_10px_30px_-10px_rgba(244,63,94,0.2)]">
-                                <div
-                                    class="w-12 h-12 shrink-0 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center group-hover:bg-rose-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(244,63,94,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13" />
-                                    </svg>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <span
-                                            class="px-2 py-0.5 rounded-md bg-rose-100/50 text-rose-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Learning</span>
-                                        <span class="text-[9px] font-medium text-slate-400">Feb 09</span>
-                                    </div>
-                                    <p class="text-slate-700 font-semibold text-sm leading-snug">New "Pluralism 101"
-                                        digital curriculum launched for schools.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                class="group flex items-center gap-5 p-4 rounded-3xl hover:bg-amber-50/30 transition-all duration-500 border border-transparent hover:border-amber-100 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.2)]">
-                                <div
-                                    class="w-12 h-12 shrink-0 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center group-hover:bg-amber-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all duration-500">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                    </svg>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="flex justify-between items-start">
-                                        <span
-                                            class="px-2 py-0.5 rounded-md bg-amber-100/50 text-amber-700 text-[8px] font-black uppercase tracking-widest mb-1 inline-block">Heritage</span>
-                                        <span class="text-[9px] font-medium text-slate-400">Feb 08</span>
-                                    </div>
-                                    <p class="text-slate-700 font-semibold text-sm leading-snug">Inter-faith heritage
-                                        walk organized in Old Delhi with 200+ participants.</p>
-                                </div>
-                            </div>
                         </div>
 
                         <a href="events.html"
                             class="mt-6 pt-6 border-t border-slate-100 flex items-center justify-between group/btn">
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="flex flex-col items-center justify-center w-12 h-12 bg-slate-50 rounded-xl border border-slate-100 group-hover/btn:bg-indigo-50">
+                                    class="flex flex-col items-center justify-center w-12 h-12 bg-slate-50 rounded-xl border border-slate-100 group-hover/btn:bg-indigo-50 transition-colors">
                                     <span class="text-[10px] font-black text-indigo-600">OCT</span>
                                     <span class="text-lg font-bold text-slate-800 -mt-1">12</span>
                                 </div>
@@ -751,7 +768,7 @@
                                 </div>
                             </div>
                             <div
-                                class="w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 group-hover/btn:bg-indigo-600 group-hover/btn:text-white transition-all">
+                                class="w-10 h-10 rounded-full flex items-center justify-center border border-slate-200 group-hover/btn:bg-indigo-600 group-hover/btn:text-white transition-all shadow-sm">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -772,7 +789,6 @@
 
                     .custom-scrollbar::-webkit-scrollbar-thumb {
                         background: #e2e8f0;
-                        /* Soft slate color */
                         border-radius: 10px;
                     }
 
@@ -828,12 +844,18 @@
             <div class="grid md:grid-cols-3 gap-10">
 
                 <div
-                    class="group relative p-10 rounded-[3rem] bg-white border border-slate-200/60 hover:border-cyan-400/50 transition-all duration-700 hover:shadow-[0_20px_60px_rgba(186,230,253,0.5)]">
+                    class="group relative p-10 rounded-[3rem] bg-white border border-slate-200/60 overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(6,182,212,0.15)]">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-cyan-100/40 blur-[40px] rounded-full"></div>
+
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-cyan-50 text-cyan-500 rounded-2xl flex items-center justify-center mb-10 shadow-[0_8px_20px_rgba(6,182,212,0.15)] group-hover:bg-cyan-500 group-hover:text-white transition-all duration-500">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            class="w-16 h-16 rounded-2xl flex items-center justify-center mb-10 
+                        bg-white border-2 border-cyan-500/30 
+                        shadow-[0_0_15px_rgba(6,182,212,0.2),inset_0_0_8px_rgba(6,182,212,0.1)]
+                        group-hover:border-cyan-500 group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4),inset_0_0_10px_rgba(6,182,212,0.2)] transition-all duration-500">
+                            <svg class="w-8 h-8 text-cyan-600 drop-shadow-[0_2px_4px_rgba(6,182,212,0.3)]" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                         </div>
@@ -842,38 +864,50 @@
                             rapid-response network of leaders trained in conflict resolution.</p>
                         <a href="programs.html"
                             class="text-[10px] font-black uppercase tracking-widest text-cyan-600 flex items-center gap-2 group-hover:gap-4 transition-all">
-                            Learn More <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                            Learn More <span>&rarr;</span>
                         </a>
                     </div>
                 </div>
 
                 <div
-                    class="group relative p-10 rounded-[3rem] bg-indigo-50/50 border border-indigo-100 md:transform md:-translate-y-8 shadow-[0_20px_50px_rgba(99,102,241,0.1)] transition-all duration-700 hover:shadow-[0_30px_70px_rgba(99,102,241,0.2)]">
+                    class="group relative p-10 rounded-[3rem] bg-white border border-slate-200/60 md:transform md:-translate-y-8 overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(99,102,241,0.15)]">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-indigo-100/40 blur-[40px] rounded-full"></div>
+
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-10 shadow-[0_10px_25px_rgba(79,70,229,0.3)] group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            class="w-16 h-16 rounded-2xl flex items-center justify-center mb-10 
+                        bg-white border-2 border-indigo-500/30 
+                        shadow-[0_0_15px_rgba(99,102,241,0.2),inset_0_0_8px_rgba(99,102,241,0.1)]
+                        group-hover:border-indigo-500 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4),inset_0_0_10px_rgba(99,102,241,0.2)] transition-all duration-500">
+                            <svg class="w-8 h-8 text-indigo-600 drop-shadow-[0_2px_4px_rgba(99,102,241,0.3)]"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 tracking-tight text-slate-900">Pluralist Literacy</h4>
-                        <p class="text-slate-600 text-sm mb-8 font-medium leading-relaxed">Educational workshops
+                        <h4 class="text-2xl font-bold mb-4 tracking-tight text-slate-800">Pluralist Literacy</h4>
+                        <p class="text-slate-500 text-sm mb-8 font-medium leading-relaxed">Educational workshops
                             focusing on constitutional values and the history of Indian pluralism.</p>
                         <a href="programs.html"
-                            class="text-[10px] font-black uppercase tracking-widest text-indigo-600 flex items-center gap-2 group-hover:text-indigo-800 transition-colors">
+                            class="text-[10px] font-black uppercase tracking-widest text-indigo-600 flex items-center gap-2 group-hover:gap-4 transition-all">
                             View Curriculum <span>&rarr;</span>
                         </a>
                     </div>
                 </div>
 
                 <div
-                    class="group relative p-10 rounded-[3rem] bg-white border border-slate-200/60 hover:border-amber-400/50 transition-all duration-700 hover:shadow-[0_20px_60px_rgba(254,243,199,0.6)]">
+                    class="group relative p-10 rounded-[3rem] bg-white border border-slate-200/60 overflow-hidden transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(245,158,11,0.15)]">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-amber-100/40 blur-[40px] rounded-full"></div>
+
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center mb-10 shadow-[0_8px_20px_rgba(217,119,6,0.15)] group-hover:bg-amber-500 group-hover:text-white transition-all duration-500">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            class="w-16 h-16 rounded-2xl flex items-center justify-center mb-10 
+                        bg-white border-2 border-amber-500/30 
+                        shadow-[0_0_15px_rgba(245,158,11,0.2),inset_0_0_8px_rgba(245,158,11,0.1)]
+                        group-hover:border-amber-500 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.4),inset_0_0_10px_rgba(245,158,11,0.2)] transition-all duration-500">
+                            <svg class="w-8 h-8 text-amber-600 drop-shadow-[0_2px_4px_rgba(245,158,11,0.3)]" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                         </div>
