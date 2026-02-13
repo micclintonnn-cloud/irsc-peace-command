@@ -549,86 +549,101 @@
         <div class="max-w-6xl mx-auto py-20 px-6">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
 
-                <div class="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left space-y-6">
+                <div class="lg:col-span-5 relative p-1">
                     <div
-                        class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-orange-50 border border-orange-100 shadow-sm">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                        </span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-orange-700">Live Mission
-                            Updates</span>
+                        class="absolute -top-10 -left-10 w-40 h-40 bg-indigo-50/50 rounded-full blur-3xl pointer-events-none">
                     </div>
 
-                    <div class="space-y-8">
-                        <div class="space-y-4">
-                            <h2 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tighter">
-                                <span class="text-slate-900">Real-time impact,</span><br>
+                    <div class="relative space-y-12">
 
-                                <span class="relative inline-block mt-2">
-                                    <span class="absolute inset-0 text-indigo-500 blur-xl opacity-20 select-none"
-                                        aria-hidden="true"
-                                        style="-webkit-text-stroke: 3px currentColor; color: transparent;">
-                                        Rooted in Mumbai.
-                                    </span>
+                        <div class="flex items-center group">
+                            <div
+                                class="flex items-center bg-slate-900 rounded-l-full py-2 px-4 shadow-lg group-hover:bg-indigo-600 transition-colors duration-500">
+                                <div class="relative w-2 h-2 mr-3">
                                     <span
-                                        class="relative text-transparent transition-all duration-500 hover:drop-shadow-[0_0_15px_rgba(79,70,229,0.5)]"
-                                        style="-webkit-text-stroke: 1.8px #4f46e5;">
-                                        Rooted in Mumbai.
-                                    </span>
+                                        class="absolute inset-0 bg-orange-400 rounded-full animate-ping opacity-40"></span>
+                                    <span
+                                        class="relative block w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_8px_#f97316]"></span>
+                                </div>
+                                <span class="text-[9px] font-black uppercase tracking-[0.3em] text-white">Live
+                                    Uplink</span>
+                            </div>
+                            <div
+                                class="bg-white border-y border-r border-slate-200 py-2 px-4 rounded-r-full text-[9px] font-bold text-slate-500 uppercase tracking-widest shadow-sm">
+                                Node_7.22_MUM
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <div
+                                class="absolute -left-4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-indigo-400 to-transparent animate-[pulse_3s_infinite]">
+                            </div>
+
+                            <h2 class="text-6xl md:text-8xl font-black text-slate-900 leading-[0.85] tracking-tight">
+                                REAL <br>
+                                <span class="relative">
+                                    TIME
+                                    <span class="absolute -bottom-2 left-0 w-12 h-1 bg-indigo-600"></span>
                                 </span>
                             </h2>
 
-                            <div class="relative pl-8">
-                                <div
-                                    class="absolute left-0 top-1 bottom-1 w-[2.5px] bg-indigo-500 shadow-[0_0_12px_rgba(79,70,229,0.6)] rounded-full">
-                                </div>
+                            <div class="mt-6 ml-1 flex items-start gap-4">
+                                <div class="text-4xl font-light text-slate-300 select-none">/</div>
+                                <h3
+                                    class="text-2xl md:text-4xl font-bold text-indigo-600 tracking-tighter max-w-[200px]">
+                                    Rooted in Mumbai.
+                                </h3>
+                            </div>
+                        </div>
 
-                                <p class="text-base md:text-lg text-slate-500 font-medium leading-relaxed max-w-md">
-                                    Our <span class="text-slate-900 font-bold">Live Hub</span> tracks every milestone.
-                                    Transparency isn't just a value—it's the foundation of <span
-                                        class="text-slate-800 underline decoration-indigo-200 decoration-2 underline-offset-4">solidarity</span>.
+                        <div class="relative max-w-sm group">
+                            <div
+                                class="absolute inset-0 bg-indigo-50/30 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700 ease-out rounded-r-lg">
+                            </div>
+                            <div
+                                class="relative py-4 border-l-[3px] border-slate-900 pl-6 group-hover:border-indigo-600 transition-colors duration-500">
+                                <p class="text-base text-slate-600 font-medium leading-relaxed">
+                                    Our <span class="text-slate-900 font-black">Live Hub</span> isn't just data—it's the
+                                    digital heartbeat of local impact.
+                                    <span
+                                        class="block mt-2 text-xs font-bold text-indigo-500 uppercase tracking-widest opacity-80">Foundation:
+                                        Solidarity_v4.0</span>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-3">
-                            <div class="px-3 py-1.5 rounded-xl border border-emerald-500/20 bg-white 
-                    shadow-[0_0_15px_rgba(16,185,129,0.08),inset_0_0_10px_rgba(16,185,129,0.03)] 
-                    flex items-center gap-2.5">
-                                <span class="relative flex h-2 w-2">
-                                    <span
-                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                                </span>
-                                <span
-                                    class="text-[10px] font-black uppercase tracking-[0.15em] text-emerald-600">Syncing
-                                    Node_01</span>
+                        <div class="flex items-center gap-8">
+                            <div class="relative flex items-center h-12">
+                                <div
+                                    class="z-30 w-12 h-12 rounded-full border-4 border-white bg-slate-100 overflow-hidden shadow-xl hover:scale-110 transition-transform">
+                                    <img src="https://i.pravatar.cc/100?u=a" alt="User">
+                                </div>
+                                <div
+                                    class="z-20 -ml-4 w-10 h-10 rounded-full border-4 border-white bg-slate-200 overflow-hidden opacity-80">
+                                    <img src="https://i.pravatar.cc/100?u=b" alt="User">
+                                </div>
+                                <div
+                                    class="absolute left-full ml-4 w-16 h-[1px] bg-slate-200 flex items-center justify-center">
+                                    <div class="w-1 h-1 bg-indigo-500 rounded-full animate-ping"></div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <div class="flex -space-x-2">
-                            <img class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover"
-                                src="https://i.pravatar.cc/100?u=1" alt="Member">
-                            <img class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover"
-                                src="https://i.pravatar.cc/100?u=2" alt="Member">
-                            <img class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover"
-                                src="https://i.pravatar.cc/100?u=3" alt="Member">
-                            <div
-                                class="w-10 h-10 rounded-full border-2 border-white bg-indigo-600 flex items-center justify-center text-[10px] font-bold text-white shadow-sm">
-                                +1.2k
+                            <div class="pl-16">
+                                <div class="relative">
+                                    <span class="text-3xl font-black text-slate-900 tracking-tighter">1,200+</span>
+                                    <span class="absolute -right-6 -top-1 flex h-2 w-2">
+                                        <span
+                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                    </span>
+                                </div>
+                                <p class="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mt-1">
+                                    Peacebuilders Syncing</p>
                             </div>
                         </div>
-                        <div class="text-left">
-                            <p class="text-xs font-bold text-slate-900 leading-none">Join 1,200+ Peacebuilders</p>
-                            <p class="text-[10px] text-slate-500 font-medium mt-1">Moving Mumbai forward.</p>
-                        </div>
+
                     </div>
                 </div>
-
                 <div class="lg:col-span-7 relative w-full group/main">
                     <div
                         class="absolute -inset-4 bg-gradient-to-tr from-indigo-100/40 to-cyan-50/40 rounded-[3rem] -z-10 blur-3xl opacity-0 group-hover/main:opacity-100 transition-opacity duration-1000">
