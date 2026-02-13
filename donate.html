@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Bricolage+Grotesque:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <title>Support the Mission | IRSC Mumbai</title>
     <script>
         tailwind.config = {
@@ -15,74 +17,277 @@
                         'irsc-purple': '#4c1d95',
                         'irsc-slate': '#475569',
                         'irsc-cyan': '#0e7490',
-                        'irsc-amber': '#d97706',
+                        'irsc-orange': '#ea580c',
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Bricolage Grotesque', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: 'Bricolage Grotesque', sans-serif;
+        }
+    </style>
 </head>
 
-<body class="bg-[#fdfbf7] text-slate-900 font-sans leading-relaxed">
+<body class="bg-[#fdfbf7] text-slate-900 leading-relaxed">
 
-    <div class="bg-orange-600 text-white py-2.5 px-4 text-center text-[11px] uppercase tracking-[0.2em] font-black sticky top-0 z-50 shadow-md">
-        <span class="inline-block animate-pulse mr-2 text-white">●</span> 
-        Tax Benefit: 80G Receipts are issued instantly via email upon successful payment.
+    <div
+        class="sticky top-0 z-[100] bg-slate-900/60 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent opacity-40">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3">
+            <div class="flex items-center gap-2 px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span
+                        class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></span>
+                </span>
+                <span class="text-[8px] font-black uppercase tracking-tighter text-cyan-300">Instant</span>
+            </div>
+
+            <p
+                class="text-[9px] md:text-[10px] text-slate-300 font-extrabold uppercase tracking-[0.25em] flex items-center">
+                Tax Benefit
+                <span class="mx-3 h-3 w-[1px] bg-white/10 hidden md:block"></span>
+                <span class="opacity-90">80G Receipts are issued <span
+                        class="text-cyan-400 underline decoration-cyan-400/40 underline-offset-4">instantly via
+                        email</span></span>
+            </p>
+
+            <svg class="w-3.5 h-3.5 text-cyan-400/80 animate-bounce-horizontal hidden sm:block" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+        </div>
+
+        <div
+            class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent">
+        </div>
     </div>
 
+    <style>
+        @keyframes bounce-horizontal {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(4px);
+            }
+        }
+
+        .animate-bounce-horizontal {
+            animation: bounce-horizontal 2.5s ease-in-out infinite;
+        }
+    </style>
+
+    <input type="checkbox" id="menu-toggle" class="peer hidden">
+
     <nav class="bg-white/90 backdrop-blur-md border-b sticky top-[38px] z-40">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
+
             <div class="flex items-center gap-4">
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo" class="h-14 w-14 object-contain transition-transform group-hover:scale-105">
+                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
+                        class="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105">
                     <div class="flex flex-col">
-                        <span class="font-serif text-2xl font-black text-irsc-purple leading-none">IRSC</span>
-                        <span class="text-[9px] uppercase tracking-[0.2em] font-black text-irsc-cyan mt-1">Inter-Religious Solidarity Council</span>
+                        <span
+                            class="font-serif text-xl md:text-2xl font-extrabold text-slate-900 leading-none">IRSC</span>
+                        <span
+                            class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-emerald-600 mt-1">
+                            Inter-Religious Solidarity Council
+                        </span>
                     </div>
                 </a>
             </div>
-            <div class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-slate-500">
-                <a href="about.html" class="hover:text-orange-600 transition-colors">About</a>
-                <a href="programs.html" class="hover:text-orange-600 transition-colors">Programs</a>
-                <a href="media.html" class="hover:text-orange-600 transition-colors">Media</a>
-                <a href="reports.html" class="hover:text-orange-600 transition-colors">Transparency</a>
-                <a href="donate.html" class="bg-orange-600 text-white px-8 py-3.5 rounded-full hover:bg-indigo-950 transition-all shadow-lg">Support Us</a>
+
+            <div
+                class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-slate-500">
+                <a href="about.html" class="hover:text-emerald-600 transition-colors">About</a>
+                <a href="programs.html" class="hover:text-emerald-600 transition-colors">Programs</a>
+                <a href="events.html" class="hover:text-emerald-600 transition-colors">Events</a>
+                <a href="gallery.html" class="hover:text-emerald-600 transition-colors">Gallery</a>
+                <a href="reports.html" class="hover:text-emerald-600 transition-colors">Transparency</a>
+
+                <div id="mainNavBtn">
+                    <a href="donate.html"
+                        class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
+                        <div
+                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
+                        </div>
+                        <span class="relative z-10">Donate</span>
+                        <div
+                            class="absolute inset-0 rounded-full border border-white/10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </a>
+                </div>
             </div>
+
+            <label for="menu-toggle"
+                class="lg:hidden p-3 rounded-xl bg-slate-50 border border-slate-200 cursor-pointer active:scale-90 transition-transform flex items-center justify-center">
+                <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </label>
         </div>
     </nav>
 
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[150] translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-center justify-center">
+
+        <div
+            class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)]">
+        </div>
+
+        <div class="absolute top-[15%] left-[-10%] w-64 h-64 bg-emerald-500/10 rounded-full blur-[100px] animate-pulse">
+        </div>
+        <div class="absolute bottom-[15%] right-[-10%] w-72 h-72 bg-teal-600/10 rounded-full blur-[100px] animate-pulse"
+            style="animation-delay: 1s;"></div>
+
+        <label for="menu-toggle"
+            class="absolute top-10 right-10 p-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white cursor-pointer hover:rotate-90 transition-all duration-500 z-[160]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </label>
+
+        <div class="relative z-10 flex flex-col items-center w-full max-w-sm px-6">
+            <div class="flex flex-col items-center gap-6 mb-12">
+                <a href="about.html"
+                    class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
+                    About
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-400 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="programs.html"
+                    class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
+                    Programs
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="events.html"
+                    class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
+                    Events
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+                <a href="reports.html"
+                    class="group relative text-3xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
+                    Reports
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-500 group-hover:w-full"></span>
+                </a>
+            </div>
+
+            <a href="donate.html"
+                class="group relative w-full py-5 bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-900 rounded-2xl text-white font-bold uppercase tracking-wider text-sm text-center shadow-[0_20px_40px_rgba(5,150,105,0.3)] hover:shadow-[0_20px_50px_rgba(5,150,105,0.5)] hover:-translate-y-1 active:scale-95 transition-all duration-500 overflow-hidden">
+                <div
+                    class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-700">
+                </div>
+                <span class="relative z-10 flex items-center justify-center">Donate Now</span>
+            </a>
+
+            <div class="flex flex-col items-center mt-12 w-full">
+                <div class="h-px w-12 bg-white/20 mb-10"></div>
+                <div class="flex gap-4 items-center justify-center">
+                    <a href="#"
+                        class="group relative p-2.5 bg-[#1877F2]/20 rounded-full border border-[#1877F2]/40 shadow-[0_0_15px_rgba(24,119,242,0.3)] transition-all duration-500 hover:scale-110">
+                        <svg class="w-4 h-4 text-[#1877F2] fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="group relative p-2.5 bg-white/20 rounded-full border border-white/40 shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-500 hover:scale-110">
+                        <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="group relative p-2.5 bg-[#E4405F]/20 rounded-full border border-[#E4405F]/40 shadow-[0_0_15px_rgba(228,64,95,0.3)] transition-all duration-500 hover:scale-110">
+                        <svg class="w-4 h-4 text-[#E4405F] fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.584-.071 4.85c-.055 1.17-.249 1.805-.415 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.015-4.85-.071c-1.17-.055-1.805-.249-2.227-.415-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.584.071-4.85c.055-1.17.249-1.805.415-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="mt-8 text-[10px] text-white/30 uppercase tracking-[0.4em] font-black text-center">Mumbai
+                    Solidarity 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Professional Animations */
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Disables scrolling when menu is checked */
+        body:has(#menu-toggle:checked) {
+            overflow: hidden;
+        }
+    </style>
     <main class="max-w-7xl mx-auto py-20 px-6 lg:py-28">
         <div class="grid lg:grid-cols-2 gap-20 items-start">
-            
+
             <div class="space-y-12">
                 <div>
-                    <h1 class="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-6">Invest in Peace</h1>
-                    <h2 class="font-serif text-6xl text-irsc-purple leading-tight mb-8">Secure the <span class="italic text-irsc-cyan">Future of Mumbai.</span></h2>
-                    <p class="text-xl text-slate-500 font-light leading-relaxed">
-                        Your contribution sustains a professional architecture of solidarity. We transform individual goodwill into systemic urban peace through law, education, and economic integration.
+                    <h1 class="text-[10px] font-black uppercase tracking-[0.4em] text-orange-600 mb-6">Invest in Peace
+                    </h1>
+                    <h2 class="font-serif text-6xl text-irsc-purple leading-[0.95] tracking-tight mb-8">
+                        Secure the <br><span class="italic text-irsc-cyan">Future of Mumbai.</span>
+                    </h2>
+                    <p class="text-xl text-slate-500 font-medium leading-relaxed max-w-lg">
+                        Your contribution sustains a professional architecture of solidarity. We transform individual
+                        goodwill into systemic urban peace through law, education, and economic integration.
                     </p>
                 </div>
 
                 <div class="space-y-6">
-                    <h3 class="font-serif text-2xl text-irsc-purple">How your funds are utilized</h3>
-                    <div class="space-y-4">
+                    <h3 class="font-serif text-2xl font-black text-irsc-purple tracking-tight">How your funds are
+                        utilized</h3>
+
+                    <div class="space-y-4 max-w-md">
                         <div class="space-y-2">
                             <div class="flex justify-between text-[10px] font-black uppercase tracking-widest">
                                 <span>Programmatic Intervention</span>
-                                <span>82%</span>
+                                <span class="text-irsc-purple">82%</span>
                             </div>
                             <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                                 <div class="bg-irsc-purple h-full w-[82%]"></div>
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                            <div
+                                class="flex justify-between text-[10px] font-black uppercase tracking-widest text-slate-400">
                                 <span>Administrative Oversight</span>
-                                <span>18%</span>
+                                <span class="text-irsc-cyan">18%</span>
                             </div>
                             <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                                 <div class="bg-irsc-cyan h-full w-[18%]"></div>
@@ -92,55 +297,76 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-start gap-4">
-                        <div class="text-orange-600 font-black text-lg">80G</div>
-                        <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider leading-tight">Tax Deductible Receipts issued for all Indian Donors.</p>
+                    <div
+                        class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm transition-hover hover:border-orange-200 group">
+                        <div class="text-orange-600 font-black text-2xl mb-2">80G</div>
+                        <p class="text-[11px] text-slate-500 font-bold uppercase tracking-widest leading-tight">Tax
+                            Deductible Receipts issued for all Indian Donors.</p>
                     </div>
-                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm flex items-start gap-4">
-                        <div class="text-irsc-cyan font-black text-lg">100%</div>
-                        <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider leading-tight">Audited Transparency with Public Disclosure Policy.</p>
+                    <div
+                        class="p-8 bg-white rounded-[2.5rem] border border-slate-100 shadow-sm transition-hover hover:border-irsc-cyan group">
+                        <div class="text-irsc-cyan font-black text-2xl mb-2">100%</div>
+                        <p class="text-[11px] text-slate-500 font-bold uppercase tracking-widest leading-tight">Audited
+                            Transparency with Public Disclosure Policy.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-[3rem] p-8 md:p-14 shadow-2xl border border-slate-50 relative overflow-hidden">
+            <div
+                class="bg-white rounded-[3.5rem] p-8 md:p-14 shadow-2xl border border-slate-50 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-[5rem] -z-0"></div>
-                
+
                 <div class="relative z-10">
                     <div class="mb-10">
-                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">1. Direct my impact to:</h2>
+                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">1. Direct my
+                            impact to:</h2>
                         <div class="grid grid-cols-2 gap-3">
-                            <button class="py-4 px-4 rounded-2xl border-2 border-irsc-purple bg-purple-50 text-irsc-purple text-[10px] font-black uppercase tracking-widest">General Peace Fund</button>
-                            <button class="py-4 px-4 rounded-2xl border-2 border-slate-100 text-slate-400 text-[10px] font-black uppercase tracking-widest hover:border-irsc-cyan transition-colors">Emergency Response</button>
+                            <button
+                                class="py-4 px-4 rounded-2xl border-2 border-irsc-purple bg-purple-50 text-irsc-purple text-[10px] font-black uppercase tracking-widest">General
+                                Peace Fund</button>
+                            <button
+                                class="py-4 px-4 rounded-2xl border-2 border-slate-100 text-slate-400 text-[10px] font-black uppercase tracking-widest hover:border-irsc-cyan transition-colors">Emergency
+                                Response</button>
                         </div>
                     </div>
 
                     <div class="mb-10">
-                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">2. Choose Amount (INR)</h2>
-                        <div class="grid grid-cols-3 gap-3 mb-4">
-                            <button class="py-5 border-2 border-slate-100 rounded-2xl font-bold hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all">₹2,500</button>
-                            <button class="py-5 border-2 border-slate-100 rounded-2xl font-bold hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all">₹5,000</button>
-                            <button class="py-5 border-2 border-slate-100 rounded-2xl font-bold hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all">₹10,000</button>
+                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-6">2. Choose
+                            Amount (INR)</h2>
+                        <div class="grid grid-cols-3 gap-3 mb-4 text-[13px]">
+                            <button
+                                class="py-5 border-2 border-slate-100 rounded-2xl font-black hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all uppercase tracking-tighter">₹2,500</button>
+                            <button
+                                class="py-5 border-2 border-slate-100 rounded-2xl font-black hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all tracking-tighter">₹5,000</button>
+                            <button
+                                class="py-5 border-2 border-slate-100 rounded-2xl font-black hover:border-irsc-purple hover:bg-irsc-purple hover:text-white transition-all tracking-tighter">₹10,000</button>
                         </div>
                         <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-slate-400">₹</span>
-                            <input type="number" placeholder="Other Amount" class="w-full p-5 pl-8 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-irsc-cyan font-bold">
+                            <span class="absolute left-5 top-1/2 -translate-y-1/2 font-black text-slate-400">₹</span>
+                            <input type="number" placeholder="OTHER AMOUNT"
+                                class="w-full p-5 pl-10 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-irsc-cyan font-black text-[11px] tracking-widest">
                         </div>
                     </div>
 
                     <div class="space-y-4 mb-10">
-                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">3. Donor Details</h2>
-                        <input type="text" placeholder="Full Name" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple">
-                        <input type="email" placeholder="Email Address" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple">
-                        <input type="text" placeholder="PAN Number (For Tax Receipt)" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple uppercase font-mono tracking-widest">
+                        <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">3. Donor
+                            Details</h2>
+                        <input type="text" placeholder="FULL LEGAL NAME"
+                            class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple font-black text-[10px] tracking-widest">
+                        <input type="email" placeholder="EMAIL ADDRESS"
+                            class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple font-black text-[10px] tracking-widest">
+                        <input type="text" placeholder="PAN NUMBER (FOR TAX RECEIPT)"
+                            class="w-full p-5 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:border-irsc-purple uppercase font-mono tracking-widest text-[10px]">
                     </div>
 
-                    <button class="w-full py-6 bg-indigo-950 text-white rounded-3xl font-black uppercase tracking-[0.3em] text-xs shadow-2xl hover:bg-orange-600 hover:-translate-y-1 transition-all">
-                        Complete Donation
+                    <button
+                        class="w-full py-6 bg-indigo-950 text-white rounded-[2rem] font-black uppercase tracking-[0.3em] text-[11px] shadow-2xl hover:bg-orange-600 hover:-translate-y-1 transition-all">
+                        Complete Secure Donation
                     </button>
 
                     <div class="mt-8 flex items-center justify-center gap-4 opacity-40 grayscale">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" alt="Razorpay" class="h-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Razorpay_logo.svg" alt="Razorpay"
+                            class="h-4">
                         <div class="w-px h-4 bg-slate-400"></div>
                         <p class="text-[9px] font-black uppercase tracking-widest">PCI-DSS Compliant</p>
                     </div>
@@ -153,42 +379,166 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="space-y-4">
-                    <h4 class="font-serif text-2xl text-orange-500">Corporate Philanthropy</h4>
-                    <p class="text-sm text-indigo-100/60 leading-relaxed">Align your CSR mandates with our Ward-level peace initiatives. We provide comprehensive impact reporting and site visit opportunities.</p>
-                    <a href="mailto:csr@irsc.org.in" class="text-[10px] font-black uppercase tracking-widest text-white border-b border-orange-500 pb-1 inline-block">Contact Treasury</a>
+                    <h4 class="font-serif text-2xl font-black text-orange-500 italic">Corporate Philanthropy</h4>
+                    <p class="text-sm text-indigo-100/60 leading-relaxed font-medium">Align your CSR mandates with our
+                        Ward-level peace initiatives. We provide comprehensive impact reporting and site visit
+                        opportunities.</p>
+                    <a href="mailto:csr@irsc.org.in"
+                        class="text-[10px] font-black uppercase tracking-widest text-white border-b border-orange-500 pb-1 inline-block hover:text-orange-500 transition-colors">Contact
+                        Treasury</a>
                 </div>
                 <div class="space-y-4">
-                    <h4 class="font-serif text-2xl text-orange-500">FCRA Limitations</h4>
-                    <p class="text-sm text-indigo-100/60 leading-relaxed">To remain compliant with current regulations, we only accept donations from Indian Bank Accounts. International portal updates will be mailed to subscribers.</p>
+                    <h4 class="font-serif text-2xl font-black text-orange-500 italic">FCRA Limitations</h4>
+                    <p class="text-sm text-indigo-100/60 leading-relaxed font-medium">To remain compliant with current
+                        regulations, we only accept donations from Indian Bank Accounts. International portal updates
+                        will be mailed to subscribers.</p>
                 </div>
                 <div class="space-y-4">
-                    <h4 class="font-serif text-2xl text-orange-500">Legacy Endowment</h4>
-                    <p class="text-sm text-indigo-100/60 leading-relaxed">Support long-term institutional stability. Discuss bequest options and named scholarship opportunities with our board members.</p>
+                    <h4 class="font-serif text-2xl font-black text-orange-500 italic">Legacy Endowment</h4>
+                    <p class="text-sm text-indigo-100/60 leading-relaxed font-medium">Support long-term institutional
+                        stability. Discuss bequest options and named scholarship opportunities with our board members.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-20 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12">
-            <div class="flex items-center gap-4">
-                <img src="IRSC logo.png" alt="Logo" class="h-12 w-12 grayscale opacity-50">
-                <div>
-                    <p class="font-serif text-xl font-black text-irsc-purple">IRSC Mumbai</p>
-                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Solidarity Council for Urban Peace</p>
+    <footer class="bg-[#050617] py-24 text-white font-sans relative overflow-hidden">
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-5 gap-16 pb-20 border-b border-white/5">
+
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="p-2 bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm">
+                            <img src="IRSC logo.png" alt="Logo" class="h-10 w-10 brightness-200 object-contain">
+                        </div>
+                        <div>
+                            <h5 class="font-serif text-2xl font-black tracking-tight leading-none">IRSC Mumbai</h5>
+                            <span class="text-[10px] text-orange-500 uppercase tracking-[0.4em] font-black">Solidarity
+                                Council</span>
+                        </div>
+                    </div>
+
+                    <p class="text-white/40 text-lg max-w-sm font-medium leading-relaxed italic">
+                        "Upholding the constitutional dignity of every citizen through the collective will of the
+                        people."
+                    </p>
+
+                    <div class="flex gap-4 items-center">
+                        <a href="#"
+                            class="group relative p-2.5 bg-[#1877F2]/10 rounded-full border border-[#1877F2]/40 shadow-[0_0_12px_rgba(24,119,242,0.25)] transition-all duration-500 hover:bg-[#1877F2]/20 hover:shadow-[0_0_20px_rgba(24,119,242,0.5)]"
+                            aria-label="Facebook">
+                            <svg class="w-4 h-4 text-[#1877F2] fill-current drop-shadow-[0_0_4px_#1877F2] transition-transform duration-500 group-hover:scale-110"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group relative p-2.5 bg-white/10 rounded-full border border-white/40 shadow-[0_0_12px_rgba(255,255,255,0.2)] transition-all duration-500 hover:bg-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+                            aria-label="X">
+                            <svg class="w-4 h-4 text-white fill-current drop-shadow-[0_0_4px_rgba(255,255,255,0.8)] transition-transform duration-500 group-hover:scale-110"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group relative p-2.5 bg-[#1DA1F2]/10 rounded-full border border-[#1DA1F2]/40 shadow-[0_0_12px_rgba(29,161,242,0.25)] transition-all duration-500 hover:bg-[#1DA1F2]/20 hover:shadow-[0_0_20px_rgba(29,161,242,0.5)]"
+                            aria-label="Twitter">
+                            <svg class="w-4 h-4 text-[#1DA1F2] fill-current drop-shadow-[0_0_4px_#1DA1F2] transition-transform duration-500 group-hover:scale-110"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group relative p-2.5 bg-[#E4405F]/10 rounded-full border border-[#E4405F]/40 shadow-[0_0_12px_rgba(228,64,95,0.25)] transition-all duration-500 hover:bg-[#E4405F]/20 hover:shadow-[0_0_20px_rgba(228,64,95,0.5)]"
+                            aria-label="Instagram">
+                            <svg class="w-4 h-4 text-[#E4405F] fill-current drop-shadow-[0_0_4px_#E4405F] transition-transform duration-500 group-hover:scale-110"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.584-.071 4.85c-.055 1.17-.249 1.805-.415 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.015-4.85-.071c-1.17-.055-1.805-.249-2.227-.415-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.584.071-4.85c.055-1.17.249-1.805.415-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500">Foundation</h6>
+                    <ul class="space-y-4 text-sm font-medium text-white/60">
+                        <li><a href="about.html"
+                                class="hover:text-white hover:translate-x-1 transition-all inline-block">Our
+                                Governance</a></li>
+                        <li><a href="impact.html"
+                                class="hover:text-white hover:translate-x-1 transition-all inline-block">Impact &
+                                Transparency</a></li>
+                        <li><a href="media.html"
+                                class="hover:text-white hover:translate-x-1 transition-all inline-block">Public Press
+                                Room</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-white hover:translate-x-1 transition-all inline-block">Get in
+                                Touch</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-8">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500">Legal Verification
+                    </h6>
+                    <div
+                        class="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-xl space-y-3 shadow-2xl">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span class="text-[9px] font-black uppercase tracking-widest text-white/80">Section 8
+                                NGO</span>
+                        </div>
+                        <p class="text-[10px] font-bold text-white/40 leading-relaxed uppercase tracking-tighter">
+                            PAN: AAATI2890C<br>
+                            REG: 192837465<br>
+                            80G TAX COMPLIANT
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-8 lg:text-right">
+                    <h6 class="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500">Movement</h6>
+                    <p class="text-xs text-white/40 font-bold uppercase tracking-widest leading-loose">
+                        Join 12,000+ Mumbaikars standing for solidarity.
+                    </p>
+                    <a href="donate.html"
+                        class="inline-flex items-center gap-3 bg-white text-indigo-950 px-6 py-3 rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-xl shadow-white/5">
+                        Contribute Now
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <div class="flex gap-10 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                <a href="reports.html" class="hover:text-orange-600 transition-colors">Annual Audits</a>
-                <a href="#" class="hover:text-orange-600 transition-colors">Donor Privacy</a>
-                <a href="contact.html" class="hover:text-orange-600 transition-colors">Contact Support</a>
-            </div>
-            <div class="text-right">
-                <p class="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Sec 8 Registered</p>
-                <p class="text-[10px] font-medium text-slate-400">Maharashtra NGO-DARPAN: MH/2025/0382</p>
+
+            <div class="pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-6 text-[9px] font-black uppercase tracking-[0.3em] text-white/20">
+                    <p>© 2026 Inter-Religious Solidarity Council</p>
+                    <span class="hidden md:block w-1 h-1 rounded-full bg-white/10"></span>
+                    <p>Designed for Mumbai</p>
+                </div>
+
+                <div class="flex gap-8 text-[9px] font-black uppercase tracking-[0.3em] text-white/20">
+                    <a href="#" class="hover:text-orange-500 transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Terms</a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">Compliance</a>
+                </div>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>
