@@ -156,54 +156,62 @@
 
     <input type="checkbox" id="menu-toggle" class="peer hidden">
 
-    <nav class="bg-white/90 backdrop-blur-md border-b sticky top-[38px] z-40">
-        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
-                        class="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105">
-                    <div class="flex flex-col">
-                        <span
-                            class="font-serif text-xl md:text-2xl font-extrabold text-slate-900 leading-none">IRSC</span>
-                        <span
-                            class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-emerald-600 mt-1">
-                            Inter-Religious Solidarity Council
-                        </span>
-                    </div>
-                </a>
-            </div>
+   <nav class="sticky top-[80px] md:top-[50px] z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="IRSC logo.png" alt="IRSC Mumbai Logo" class="h-10 w-10 md:h-14 md:w-14 object-contain">
+                <div class="flex flex-col">
+                    <span
+                        class="text-xl md:text-2xl font-extrabold text-indigo-950 leading-none tracking-tight">IRSC</span>
+                    <span
+                        class="text-[8px] md:text-[9px] uppercase tracking-[0.25em] font-extrabold text-cyan-600 mt-1">Inter-Religious
+                        Solidarity Council</span>
+                </div>
+            </a>
 
             <div
-                class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-slate-500">
-                <a href="about.html" class="hover:text-orange-600 transition-colors">About</a>
-                <a href="programs.html" class="text-orange-600 border-b-2 border-orange-600 pb-1">Programs</a>
-                <a href="events.html" class="hover:text-orange-600 transition-colors">Events</a>
-                <a href="gallery.html" class="hover:text-orange-600 transition-colors">Gallery</a>
-                <a href="reports.html" class="hover:text-orange-600 transition-colors">Transparency</a>
+                class="hidden lg:flex gap-8 items-center text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
+                <a href="about.html" class="hover:text-[#800000] transition-all">About</a>
+                <a href="programs.html" class="hover:text-[#800000] transition-all">Programs</a>
+                <a href="events.html" class="hover:text-[#800000] transition-all">Events</a>
+                <a href="gallery.html" class="hover:text-[#800000] transition-all">Gallery</a>
+                <a href="reports.html" class="hover:text-[#800000] transition-all">Transparency</a>
+                <a href="donate.html"
+                    class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
 
-                <div id="mainNavBtn">
-                    <a href="donate.html"
-                        class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
-                        <div
-                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
-                        </div>
-                        <span class="relative z-10">Donate</span>
-                        <div
-                            class="absolute inset-0 rounded-full border border-white/10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                    </a>
-                </div>
+                    <div
+                        class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
+                    </div>
+
+                    <span class="relative z-10">
+                        Donate
+                    </span>
+
+                    <div
+                        class="absolute inset-0 rounded-full border border-white/10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                </a>
+
+                <style>
+                    @keyframes shimmer {
+                        100% {
+                            transform: translateX(100%);
+                        }
+                    }
+                </style>
             </div>
 
-            <label for="menu-toggle"
-                class="lg:hidden p-3 rounded-xl bg-slate-50 border border-slate-200 cursor-pointer active:scale-90 transition-transform flex items-center justify-center">
-                <svg class="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+            <label for="menu-toggle" class="lg:hidden cursor-pointer flex flex-col gap-1.5 w-6 group">
+                <span class="w-full h-0.5 bg-indigo-950 transition-all group-hover:bg-cyan-600"></span>
+                <span class="w-full h-0.5 bg-indigo-950 transition-all group-hover:bg-cyan-600"></span>
+                <span
+                    class="w-3/4 h-0.5 bg-indigo-950 transition-all group-hover:w-full group-hover:bg-cyan-600"></span>
             </label>
         </div>
     </nav>
+
 
     <div id="mobile-menu"
         class="fixed inset-0 z-[150] translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-center justify-center">

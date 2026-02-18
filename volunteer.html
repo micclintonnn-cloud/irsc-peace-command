@@ -21,55 +21,40 @@
                         'irsc-amber': '#d97706',
                     },
                     fontFamily: {
-                        serif: ['Bricolage Grotesque', 'sans-serif'],
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        // Modern sans-serif for body
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        // Distinctive style for headings/serif key
+                        serif: ['"Bricolage Grotesque"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+
     <style>
+        /* Apply fonts globally using Tailwind's keys */
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            font-feature-settings: 'clig' 1, 'liga' 1;
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Automatically apply Bricolage to all headings */
         h1,
         h2,
         h3,
         h4,
         h5,
+        h6,
         .font-serif {
             font-family: 'Bricolage Grotesque', sans-serif;
         }
 
+        /* Form & Interaction Logic */
         .form-input:focus {
             border-color: #4c1d95 !important;
             outline: none !important;
             box-shadow: 0 0 0 4px rgba(76, 29, 149, 0.1);
-        }
-    </style>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'irsc-purple': '#4c1d95',
-                        'irsc-slate': '#475569',
-                        'irsc-cyan': '#0e7490',
-                        'irsc-amber': '#d97706',
-                    },
-                    fontFamily: {
-                        // Using Plus Jakarta Sans - very modern, used by high-end tech & e-commerce
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-feature-settings: 'clig' 1, 'liga' 1;
         }
 
         #scrollAction {
@@ -83,34 +68,17 @@
             opacity: 1;
         }
 
-        #mainNavBtn {
-            transition: opacity 0.3s ease;
-        }
-
-        #mainNavBtn.hide {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        /* Mobile Menu Logic */
+        /* Navigation & Menu Animations */
         #menu-toggle:checked~#mobile-menu {
             display: flex;
         }
 
-        #menu-toggle:checked~label .hamburger-line:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
+        .animate-menu-bg {
+            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #2e1065, #083344);
+            background-size: 400% 400%;
+            animation: shiftGradient 12s ease infinite;
         }
 
-        #menu-toggle:checked~label .hamburger-line:nth-child(2) {
-            opacity: 0;
-        }
-
-        #menu-toggle:checked~label .hamburger-line:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-    </style>
-
-    <style>
         @keyframes shiftGradient {
             0% {
                 background-position: 0% 50%;
@@ -125,34 +93,31 @@
             }
         }
 
-        .animate-menu-bg {
-            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #2e1065, #083344);
-            background-size: 400% 400%;
-            animation: shiftGradient 12s ease infinite;
-        }
-
+        /* Colorful Social Glows (As per your preference) */
         .neon-fb {
             filter: drop-shadow(0 0 8px rgba(24, 119, 242, 0.8));
+            color: #1877F2;
         }
 
         .neon-ig {
             filter: drop-shadow(0 0 8px rgba(228, 64, 95, 0.8));
+            color: #E4405F;
         }
 
         .neon-x {
             filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
-        }
-
-        /* Staggered Fade-in for Links */
-        .peer-checked~#mobile-menu .nav-item {
-            opacity: 1;
-            transform: translateY(0);
+            color: #ffffff;
         }
 
         .nav-item {
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #menu-toggle:checked~#mobile-menu .nav-item {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -231,48 +196,90 @@
 
     <input type="checkbox" id="menu-toggle" class="hidden peer">
 
-    <nav class="bg-white/90 backdrop-blur-md border-b sticky top-[38px] z-40">
+    <nav class="sticky top-[80px] md:top-[50px] z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
-                        class="h-10 w-10 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105">
-                    <div class="flex flex-col">
-                        <span
-                            class="font-serif text-xl md:text-2xl font-extrabold text-irsc-purple leading-none">IRSC</span>
-                        <span
-                            class="text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black text-irsc-cyan mt-1">Inter-Religious
-                            Solidarity Council</span>
-                    </div>
-                </a>
-            </div>
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="IRSC logo.png" alt="IRSC Mumbai Logo" class="h-10 w-10 md:h-14 md:w-14 object-contain">
+                <div class="flex flex-col">
+                    <span
+                        class="text-xl md:text-2xl font-extrabold text-indigo-950 leading-none tracking-tight">IRSC</span>
+                    <span
+                        class="text-[8px] md:text-[9px] uppercase tracking-[0.25em] font-extrabold text-cyan-600 mt-1">Inter-Religious
+                        Solidarity Council</span>
+                </div>
+            </a>
 
             <div
-                class="hidden lg:flex gap-8 items-center text-[11px] font-black uppercase tracking-widest text-slate-500">
-                <a href="about.html" class="hover:text-orange-600 transition-colors">About</a>
-                <a href="programs.html" class="hover:text-orange-600 transition-colors">Programs</a>
-                <a href="events.html" class="hover:text-orange-600 transition-colors">Events</a>
-                <a href="gallery.html" class="hover:text-orange-600 transition-colors">Gallery</a>
-                <a href="volunteer.html" class="text-orange-600 border-b-2 border-orange-600 pb-1">Join US</a>
-                <a href="reports.html" class="hover:text-orange-600 transition-colors">Transparency</a>
-                <div id="mainNavBtn">
-                    <a href="donate.html"
-                        class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
+                class="hidden lg:flex gap-8 items-center text-[11px] font-extrabold uppercase tracking-widest text-slate-500">
+                <a href="about.html" class="hover:text-[#800000] transition-all">About</a>
+                <a href="events.html" class="hover:text-[#800000] transition-all">Events</a>
+                <a href="events.html" class="hover:text-[#800000] transition-all">News</a>
+                <a href="gallery.html" class="hover:text-[#800000] transition-all">Gallery</a>
+                <a href="volunteer.html" class="hover:text-[#800000] transition-all">Join US</a>
+                <a href="reports.html" class="hover:text-[#800000] transition-all">Reports</a>
+                <a href="contact.html" class="hover:text-[#800000] transition-all">Contact</a>
 
-                        <div
-                            class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
-                        </div>
+                <!-- <a href="#"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white transition-all duration-400">
+                    <span class="relative z-10">Home</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
 
-                        <span class="relative z-10">Donate</span>
+                <a href="about.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">About</span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-full h-[1.5px] bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.3)]"></span>
+                </a>
+                <a href="events.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Events</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="media.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">News</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="volunteer.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Join Us</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="reports.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Reports</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="contact.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Contact</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a> -->
 
-                        <div
-                            class="absolute inset-0 rounded-full border border-white/10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                    </a>
-                </div>
+                <a href="donate.html"
+                    class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-7 py-3 rounded-full text-[11px] font-bold uppercase tracking-wider overflow-hidden transition-all duration-500 shadow-md hover:shadow-[0_12px_24px_rgba(5,150,105,0.3)] hover:-translate-y-1 active:scale-95 group">
+
+                    <div
+                        class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
+                    </div>
+
+                    <span class="relative z-10">
+                        Donate
+                    </span>
+
+                    <div
+                        class="absolute inset-0 rounded-full border border-white/10 opacity-30 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                </a>
 
                 <style>
-                    /* Ensure this keyframe is in your global CSS file */
                     @keyframes shimmer {
                         100% {
                             transform: translateX(100%);
@@ -293,101 +300,130 @@
     <input type="checkbox" id="menu-toggle" class="peer hidden">
 
     <div id="mobile-menu"
-        class="fixed inset-0 z-[150] translate-x-full pointer-events-none peer-checked:translate-x-0 peer-checked:pointer-events-auto transition-transform duration-500 ease-in-out lg:hidden flex flex-col items-center justify-center">
+        class="fixed inset-0 z-[150] translate-x-full pointer-events-none peer-checked:translate-x-0 peer-checked:pointer-events-auto transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden bg-slate-950 overflow-y-auto">
 
-        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl"></div>
+        <div class="fixed inset-0 bg-slate-950/90 backdrop-blur-2xl"></div>
 
-        <div class="absolute top-[10%] left-[-10%] w-64 h-64 bg-purple-600/20 rounded-full blur-[100px] animate-pulse">
-        </div>
-        <div class="absolute bottom-[10%] right-[-10%] w-72 h-72 bg-indigo-600/10 rounded-full blur-[100px] animate-pulse"
-            style="animation-delay: 1s;"></div>
+        <div
+            class="relative z-10 flex flex-col min-h-screen px-8 pt-20 pb-[calc(2rem+env(safe-area-inset-bottom))] max-w-lg mx-auto w-full">
 
-        <div class="absolute top-0 left-0 w-full p-8 flex justify-between items-center z-[160]">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="Logo"
-                    class="h-10 w-auto drop-shadow-[0_0_10px_rgba(139,92,246,0.5)] transition-transform group-hover:scale-105">
-                <div class="flex flex-col">
-                    <span
-                        class="text-white font-black tracking-widest text-[12px] uppercase leading-none">Solidarity</span>
-                    <span class="text-[#4c1d95] font-bold text-[10px] uppercase tracking-[0.2em]">Mumbai</span>
+            <div class="absolute top-0 left-0 right-0 px-8 py-8 flex items-center justify-between z-20">
+                <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-0 bg-emerald-500/10 rounded-full blur-lg"></div>
+                    <div
+                        class="relative w-11 h-11 bg-slate-900 border border-white/5 rounded-full overflow-hidden flex items-center justify-center">
+                        <img src="/IRSC logo.png" alt="Logo" class="w-full h-full object-cover opacity-90">
+                    </div>
                 </div>
-            </a>
 
-            <label for="menu-toggle"
-                class="p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white cursor-pointer hover:rotate-90 hover:bg-white/10 transition-all duration-500">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </label>
-        </div>
-
-        <div class="relative z-10 flex flex-col items-center w-full max-w-sm px-6">
-
-            <div class="flex flex-col items-center gap-8 mb-12">
-                <a href="about.html"
-                    class="group relative text-4xl font-serif font-bold tracking-tight text-white transition-all duration-300">
-                    About
-                    <span
-                        class="absolute -bottom-1 left-0 w-full h-1 bg-[#4c1d95] shadow-[0_0_15px_rgba(76,29,149,0.6)]"></span>
-                </a>
-                <a href="programs.html"
-                    class="group relative text-4xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
-                    Programs
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-1 bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
-                </a>
-                <a href="events.html"
-                    class="group relative text-4xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
-                    Events
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-1 bg-indigo-400 transition-all duration-500 group-hover:w-full"></span>
-                </a>
-                <a href="reports.html"
-                    class="group relative text-4xl font-serif font-bold tracking-tight text-white/90 hover:text-white transition-all duration-300">
-                    Reports
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-1 bg-violet-500 transition-all duration-500 group-hover:w-full"></span>
-                </a>
+                <label for="menu-toggle"
+                    class="w-11 h-11 flex items-center justify-center rounded-full border border-white/5 bg-white/[0.03] text-white/50 cursor-pointer hover:bg-white/10 hover:text-white transition-all duration-300">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
             </div>
 
-            <a href="donate.html"
-                class="group relative w-full py-5 bg-gradient-to-r from-[#4c1d95] via-purple-700 to-indigo-900 rounded-2xl text-white font-bold uppercase tracking-wider text-sm text-center shadow-[0_20px_40px_rgba(76,29,149,0.3)] hover:shadow-[0_20px_50px_rgba(76,29,149,0.5)] hover:-translate-y-1 active:scale-95 transition-all duration-500 overflow-hidden">
-                <div
-                    class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite] transition-transform duration-1000">
-                </div>
-                <span class="relative z-10">Donate Now</span>
-            </a>
+            <nav class="flex-1 flex flex-col justify-center space-y-5 py-6">
+                <a href="index.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white transition-all duration-400">
+                    <span class="relative z-10">Home</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
 
-            <div class="flex flex-col items-center mt-12 w-full">
-                <div class="h-px w-12 bg-white/20 mb-8"></div>
+                <a href="about.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">About</span>
+                    <span
+                        class=""></span>
+                </a>
+                <a href="events.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Events</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="media.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">News</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="gallery.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Gallery</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="volunteer.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Join Us</span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-full h-[1.5px] bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.3)]"></span>
+                </a>
+                <a href="reports.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Reports</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+                <a href="contact.html"
+                    class="group relative w-max mx-auto text-xl font-medium tracking-tight text-white/70 hover:text-white transition-all duration-400">
+                    <span class="relative z-10">Contact</span>
+                    <span
+                        class="absolute -bottom-1 left-1/2 w-0 h-[1px] bg-gradient-to-r from-emerald-500/50 to-teal-500/50 transition-all duration-500 ease-out group-hover:w-full group-hover:left-0"></span>
+                </a>
+            </nav>
 
-                <div class="flex gap-6 items-center justify-center">
+            <div class="mt-auto pt-10 flex flex-col items-center space-y-5">
+                <a href="donate.html"
+                    class="relative inline-flex items-center justify-center bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-900 text-white px-9 py-3.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] overflow-hidden transition-all duration-500 shadow-lg hover:-translate-y-1 active:scale-95 group w-full max-w-[240px]">
+                    <div
+                        class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_2.5s_infinite] transition-transform duration-1000">
+                    </div>
+                    <span class="relative z-10">Donate Now</span>
+                    <div class="absolute inset-0 rounded-full border border-white/10 opacity-30"></div>
+                </a>
+
+                <div class="flex items-center justify-center gap-4 pb-8">
                     <a href="#"
-                        class="p-3 bg-[#1877F2]/10 rounded-full border border-[#1877F2]/20 hover:bg-[#1877F2] transition-all duration-300 group">
-                        <svg class="w-5 h-5 text-[#1877F2] group-hover:text-white fill-current" viewBox="0 0 24 24">
+                        class="group p-2.5 bg-white/[0.02] rounded-full border border-white/5 transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-500/20 shadow-sm">
+                        <svg class="w-4 h-4 text-[#1877F2] fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                     </a>
                     <a href="#"
-                        class="p-3 bg-[#E4405F]/10 rounded-full border border-[#E4405F]/20 hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] transition-all duration-300 group">
-                        <svg class="w-5 h-5 text-[#E4405F] group-hover:text-white fill-current" viewBox="0 0 24 24">
+                        class="group p-2.5 bg-white/[0.02] rounded-full border border-white/5 transition-all duration-300 hover:bg-white/[0.05] hover:border-white/20 shadow-sm">
+                        <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="group p-2.5 bg-white/[0.02] rounded-full border border-white/5 transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-500/20 shadow-sm">
+                        <svg class="w-4 h-4 text-[#E4405F] fill-current" viewBox="0 0 24 24">
                             <path
                                 d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.584-.071 4.85c-.055 1.17-.249 1.805-.415 2.227-.217.562-.477.96-.896 1.382-.42.419-.819.679-1.381.896-.422.164-1.056.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.584-.015-4.85-.071c-1.17-.055-1.805-.249-2.227-.415-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.584.071-4.85c.055-1.17.249-1.805.415-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                         </svg>
                     </a>
                     <a href="#"
-                        class="p-3 bg-white/10 rounded-full border border-white/20 hover:bg-black transition-all duration-300">
-                        <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                        class="group p-2.5 bg-white/[0.02] rounded-full border border-white/5 transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-500/20 shadow-sm">
+                        <svg class="w-4 h-4 text-[#0077B5] fill-current" viewBox="0 0 24 24">
                             <path
-                                d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                                d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.58c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.26 2.37 4.26 5.45v6.3z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="group p-2.5 bg-white/[0.02] rounded-full border border-white/5 transition-all duration-300 hover:bg-white/[0.05] hover:border-emerald-500/20 shadow-sm">
+                        <svg class="w-4 h-4 text-[#0077B5] fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.58c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM20.45 20.45h-3.56v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96v5.7h-3.56V9h3.42v1.56h.05c.48-.9 1.64-1.86 3.37-1.86 3.6 0 4.26 2.37 4.26 5.45v6.3z" />
                         </svg>
                     </a>
                 </div>
-
-                <p class="mt-8 text-[10px] text-white/30 uppercase tracking-[0.4em] font-black text-center">
-                    Mumbai Solidarity 2026
-                </p>
             </div>
         </div>
     </div>
@@ -427,332 +463,10 @@
         </div>
     </header> -->
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .serif {
-            font-family: 'DM Serif Display', serif;
-        }
-
-        .civic-bg {
-            background:
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
-                #fdfcfb;
-            position: relative;
-        }
-
-        .civic-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0.4;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            pointer-events: none;
-        }
-
-        /* Floating Label Logic */
-        .field-container {
-            position: relative;
-        }
-
-        .field-input:focus~.field-label,
-        .field-input:not(:placeholder-shown)~.field-label {
-            transform: translateY(-1.4rem) scale(0.85);
-            color: #4f46e5;
-            background: white;
-            padding: 0 4px;
-        }
-
-        /* Custom Scrollbar */
-        .custom-scroll::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-track {
-            background: #f1f5f9;
-            border-radius: 10px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: #e2e8f0;
-            border-radius: 10px;
-        }
-
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: #6366f1;
-        }
-
-        /* Role Card Interaction */
-        .role-card input:checked+.role-content {
-            border-color: #6366f1;
-            background-color: rgba(99, 102, 241, 0.05);
-            transform: scale(1.02);
-            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
-        }
-    </style>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .serif {
-            font-family: 'DM Serif Display', serif;
-        }
-
-        /* Premium Abstract Background */
-        .civic-gradient-bg {
-            background: radial-gradient(circle at 0% 0%, #1e1b4b 0%, #0f172a 50%, #020617 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Saffron Accent Glow */
-        .saffron-glow {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(249, 115, 22, 0.07) 0%, transparent 70%);
-            top: -100px;
-            right: -100px;
-            filter: blur(60px);
-            z-index: 1;
-        }
-
-        /* Light Beam Effect */
-        .light-beam {
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.2), transparent);
-            left: 20%;
-            transform: rotate(25deg);
-            z-index: 0;
-        }
-
-        /* Glassmorphism Panel */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        }
-
-        /* Form Floating Labels */
-        .form-group {
-            position: relative;
-        }
-
-        .form-input:focus~.form-label,
-        .form-input:not(:placeholder-shown)~.form-label {
-            transform: translateY(-1.5rem) scale(0.85);
-            color: #818cf8;
-            background: #0f172a;
-            /* Match form bg for cut-out effect */
-            padding: 0 8px;
-        }
-
-        /* CTA Pulse Glow */
-        @keyframes pulse-glow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 15px rgba(99, 102, 241, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-            }
-        }
-
-        .cta-animate {
-            animation: pulse-glow 2s infinite;
-        }
-
-        /* Custom Checkbox Animation */
-        .role-select:checked+.role-card {
-            border-color: #6366f1;
-            background: rgba(99, 102, 241, 0.1);
-            transform: scale(1.02);
-        }
-    </style>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .serif {
-            font-family: 'DM Serif Display', serif;
-        }
-
-        /* Light Layered Background */
-        .civic-light-bg {
-            background-color: #fcfcfd;
-            background-image:
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 100% 100%, rgba(249, 115, 22, 0.03) 0%, transparent 40%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Abstract Civic Patterns */
-        .civic-pattern {
-            position: absolute;
-            inset: 0;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%234f46e5' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            mask-image: linear-gradient(to bottom, black, transparent);
-        }
-
-        /* Light Glassmorphism */
-        .light-glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        /* Floating Labels */
-        .form-group {
-            position: relative;
-        }
-
-        .form-input:focus~.form-label,
-        .form-input:not(:placeholder-shown)~.form-label {
-            transform: translateY(-1.4rem) scale(0.85);
-            color: #4f46e5;
-            background: white;
-            padding: 0 6px;
-            left: 1.25rem;
-        }
-
-        /* Selection Card Logic */
-        .role-check:checked+.role-card {
-            border-color: #6366f1;
-            background: linear-gradient(to bottom right, #ffffff, #f5f3ff);
-            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.15);
-        }
-
-        /* Pulse Glow for CTA */
-        @keyframes soft-pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2);
-            }
-
-            70% {
-                box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-            }
-        }
-
-        .cta-glow {
-            animation: soft-pulse 3s infinite;
-        }
-    </style>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .serif {
-            font-family: 'DM Serif Display', serif;
-        }
-
-        /* Soft Airy Background */
-        .civic-light-bg {
-            background: radial-gradient(circle at 0% 0%, #f5f7ff 0%, #ffffff 100%);
-            position: relative;
-        }
-
-        /* Subtlest Civic Pattern */
-        .civic-light-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            opacity: 0.02;
-            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0l40 40-40 40L0 40z' fill='%234338ca' fill-rule='evenodd'/%3E%3C/svg%3E");
-            pointer-events: none;
-        }
-
-        /* Floating Label Logic */
-        .input-group {
-            position: relative;
-        }
-
-        .floating-input:focus~.floating-label,
-        .floating-input:not(:placeholder-shown)~.floating-label {
-            transform: translateY(-1.5rem) scale(0.85);
-            color: #4338ca;
-            background: #f8fafc;
-            /* Match input bg */
-            padding: 0 6px;
-        }
-
-        /* Selection Card Logic */
-        .role-checkbox:checked+.role-card-ui {
-            border-color: #6366f1;
-            background-color: #f5f7ff;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08);
-        }
-
-        /* Segmented Control Animation */
-        .segmented-control input:checked+div {
-            background-color: white;
-            color: #4338ca;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-    </style>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .serif {
-            font-family: 'DM Serif Display', serif;
-        }
-
         /* Soft Airy Background */
         .civic-light-bg {
             background: radial-gradient(circle at 0% 0%, #f5f7ff 0%, #ffffff 100%);
