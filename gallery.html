@@ -444,8 +444,8 @@
                     </div>
                 </div>
                 <div
-                    class="expanded-content opacity-0 invisible h-0 overflow-hidden bg-white transition-all duration-500">
-                    <div class="flex flex-col lg:flex-row h-full relative">
+                    class="expanded-content opacity-0 invisible max-h-0 overflow-hidden bg-white transition-all duration-500">
+                    <div class="flex flex-col lg:flex-row lg:h-full relative">
                         <button onclick="toggleExpand('rec-1')"
                             class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-white/90 rounded-full shadow-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-900" fill="none"
@@ -503,7 +503,7 @@
                 </div>
                 <div
                     class="expanded-content opacity-0 invisible h-0 overflow-hidden bg-white transition-all duration-500">
-                    <div class="flex flex-col lg:flex-row h-full relative">
+                    <div class="flex flex-col lg:flex-row lg:h-full relative">
                         <button onclick="toggleExpand('rec-2')"
                             class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-white/90 rounded-full shadow-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-900" fill="none"
@@ -555,7 +555,7 @@
                 </div>
                 <div
                     class="expanded-content opacity-0 invisible h-0 overflow-hidden bg-white transition-all duration-500">
-                    <div class="flex flex-col lg:flex-row h-full relative">
+                    <div class="flex flex-col lg:flex-row lg:h-full relative">
                         <button onclick="toggleExpand('rec-3')"
                             class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-white/90 rounded-full shadow-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-900" fill="none"
@@ -613,7 +613,7 @@
                 </div>
                 <div
                     class="expanded-content opacity-0 invisible h-0 overflow-hidden bg-white transition-all duration-500">
-                    <div class="flex flex-col lg:flex-row h-full relative">
+                    <div class="flex flex-col lg:flex-row lg:h-full relative">
                         <button onclick="toggleExpand('rec-4')"
                             class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-white/90 rounded-full shadow-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-900" fill="none"
@@ -667,7 +667,7 @@
                 </div>
                 <div
                     class="expanded-content opacity-0 invisible h-0 overflow-hidden bg-white transition-all duration-500">
-                    <div class="flex flex-col lg:flex-row h-full relative">
+                    <div class="flex flex-col lg:flex-row lg:h-full relative">
                         <button onclick="toggleExpand('rec-5')"
                             class="absolute top-4 right-4 z-50 w-10 h-10 flex items-center justify-center bg-white/90 rounded-full shadow-xl">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-900" fill="none"
@@ -830,16 +830,21 @@
 
         /* MOBILE: High Impact Viewport */
         @media (max-width: 768px) {
-            .is-expanded {
-                max-height: 95vh !important;
-            }
 
-            .is-expanded .expanded-content {
-                height: 95vh !important;
-            }
+    .gallery-item.is-expanded {
+        max-height: none !important;
+    }
 
-            /* Sticky Mobile Close Logic could go here if needed */
-        }
+    .is-expanded .expanded-content {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .is-expanded .flex {
+        height: auto !important;
+    }
+}
+
 
         /* UI Polish */
         .custom-scrollbar::-webkit-scrollbar {
