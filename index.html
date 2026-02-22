@@ -125,13 +125,13 @@
 
             0%,
             100% {
-                box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+                box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
                 transform: scale(1);
             }
 
             50% {
-                box-shadow: 0 0 35px rgba(16, 185, 129, 0.4);
-                transform: scale(1.03);
+                box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+                transform: scale(1.02);
             }
         }
 
@@ -145,7 +145,7 @@
             }
 
             50% {
-                filter: drop-shadow(0 0 10px #fb7185);
+                filter: drop-shadow(0 0 8px #fb7185);
                 opacity: 1;
             }
         }
@@ -162,22 +162,30 @@
     <div id="scrollAction" class="fixed bottom-6 right-6 z-[100] group flex flex-col items-end">
 
         <div
-            class="mb-3 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] font-black uppercase tracking-[0.4em] rounded-full opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 pointer-events-none">
+            class="mb-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] font-black uppercase tracking-[0.3em] rounded-md opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 pointer-events-none">
             United Humanity
         </div>
 
-        <a href="donate.html" class="animate-irsc relative flex items-center gap-3.5 pl-4 pr-6 py-3 bg-gradient-to-br from-[#011c16] via-[#022c22] to-[#064e3b] rounded-full 
+        <a href="donate.html" class="animate-irsc relative flex items-center gap-3 pl-5 pr-3 py-2 bg-gradient-to-br from-[#011c16] via-[#022c22] to-[#064e3b] rounded-full 
               border border-emerald-500/30 overflow-hidden transition-all duration-500
               hover:border-rose-400/40 hover:scale-105 active:scale-95">
 
             <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(16,185,129,0.4),transparent)] opacity-70">
+                class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(16,185,129,0.3),transparent)] opacity-60">
+            </div>
+
+            <div class="relative z-10 flex flex-col items-start leading-none">
+                <span class="text-white font-black text-base tracking-tight">Donate</span>
+                <div class="flex items-center gap-1 mt-0.5">
+                    <span class="text-emerald-400 text-[7px] font-bold uppercase tracking-widest">Solidarity</span>
+                    <span class="text-white text-[6px] bg-emerald-500/20 px-1 rounded-sm">₹</span>
+                </div>
             </div>
 
             <div class="relative z-10 flex items-center justify-center">
-                <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 14.5C3 14.5 5 13 8 13C11 13 13 14.5 16 14.5C19 14.5 21 12 22 13" stroke="white"
-                        stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round" />
+                        stroke-opacity="0.4" stroke-width="1.8" stroke-linecap="round" />
                     <path d="M2 15C2 15 5 18 9 18C13 18 18 16 21 14" stroke="white" stroke-opacity="0.2"
                         stroke-width="2" stroke-linecap="round" />
 
@@ -187,14 +195,6 @@
 
                     <circle cx="12" cy="8.5" r="0.8" fill="white" class="animate-pulse" />
                 </svg>
-            </div>
-
-            <div class="relative z-10 flex flex-col items-start leading-none">
-                <span class="text-white font-black text-lg tracking-tight">Donate</span>
-                <div class="flex items-center gap-1 mt-1">
-                    <span class="text-emerald-400 text-[8px] font-bold uppercase tracking-widest">IRSC Solidarity</span>
-                    <span class="text-white text-[7px] bg-emerald-500/20 px-1 rounded-sm">₹</span>
-                </div>
             </div>
 
             <div
