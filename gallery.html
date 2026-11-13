@@ -1956,30 +1956,46 @@
         }
 
         function swapImg(recId, thumb) {
-            const heroImg = document.getElementById(`hero-${recId}`);
+            const card = document.getElementById(recId);
+            const heroImg = card && card.querySelector(`#hero-${recId}`);
+            if (!heroImg || !card.contains(thumb)) {
+                return;
+            }
 
-            // 1. Smooth Fade Out
-            heroImg.style.transition = 'opacity 0.25s ease';
-            heroImg.style.opacity = '0';
-
-            setTimeout(() => {
-                // 2. Change Source
-                heroImg.src = thumb.src;
-
-                // 3. Smooth Fade In
-                heroImg.style.opacity = '1';
-
-                // 4. Update Thumbnail Styles (Colorful borders as per your preference)
-                const thumbnails = thumb.parentElement.querySelectorAll('img');
-                thumbnails.forEach(t => {
-                    t.classList.remove('border-purple-600', 'border-2', 'opacity-100');
-                    t.classList.add('border-slate-100', 'border', 'opacity-60');
+            const src = thumb.currentSrc || thumb.src;
+            const thumbnails = thumb.parentElement.querySelectorAll('img');
+            const highlightThumbnail = () => {
+                thumbnails.forEach(image => {
+                    image.classList.remove('border-purple-600', 'border-2', 'opacity-100');
+                    image.classList.add('border-transparent', 'border', 'opacity-60');
                 });
-
-                // Highlight the active thumbnail
-                thumb.classList.remove('opacity-60', 'border-slate-100', 'border');
+                thumb.classList.remove('border-transparent', 'border', 'opacity-60');
                 thumb.classList.add('border-purple-600', 'border-2', 'opacity-100');
-            }, 250);
+            };
+
+            if (heroImg.currentSrc === src || heroImg.src === src) {
+                highlightThumbnail();
+                return;
+            }
+
+            const requestId = String((Number(heroImg.dataset.swapRequest) || 0) + 1);
+            heroImg.dataset.swapRequest = requestId;
+
+            const nextImage = new Image();
+            nextImage.onload = () => {
+                if (heroImg.dataset.swapRequest !== requestId) {
+                    return;
+                }
+
+                heroImg.src = src;
+                highlightThumbnail();
+            };
+            nextImage.onerror = () => {
+                if (heroImg.dataset.swapRequest === requestId) {
+                    console.error('Gallery image could not be loaded:', src);
+                }
+            };
+            nextImage.src = src;
         }
     </script>
 
@@ -2089,34 +2105,6 @@
     </footer>
 
     <script>
-
-        function swapImg(recId, thumb) {
-            // Find the large hero image using the ID
-            const heroImg = document.getElementById(`hero-${recId}`);
-
-            // 1. Fade out effect
-            heroImg.style.opacity = '0';
-            heroImg.style.transition = 'opacity 0.2s ease-in-out';
-
-            setTimeout(() => {
-                // 2. Swap the source
-                heroImg.src = thumb.src;
-
-                // 3. Fade back in
-                heroImg.style.opacity = '1';
-
-                // 4. Reset borders on all thumbnails in this specific card
-                const allThumbs = thumb.parentElement.querySelectorAll('img');
-                allThumbs.forEach(img => {
-                    img.classList.remove('border-purple-600');
-                    img.classList.add('border-transparent'); // keep them clean
-                });
-
-                // 5. Highlight the clicked thumbnail
-                thumb.classList.add('border-purple-600');
-                thumb.classList.remove('border-transparent');
-            }, 200);
-        }
 
         document.addEventListener('DOMContentLoaded', () => {
             const mainNavBtn = document.getElementById('mainNavBtn');
