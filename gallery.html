@@ -103,6 +103,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./image-loading.css">
 </head>
 
 <body class="bg-[#fdfbf7] text-slate-900 font-sans leading-relaxed">
@@ -226,7 +227,7 @@
             <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-3 group">
                     <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
-                        class="h-14 w-14 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-105">
+                        class="h-14 w-14 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async">
 
                     <div class="flex flex-col">
                         <span
@@ -305,7 +306,7 @@
                         <div class="absolute inset-0 bg-emerald-500/10 rounded-full blur-lg"></div>
                         <div
                             class="relative w-14 h-14 bg-slate-900 border border-white/5 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src="./IRSC logo.png" alt="Logo" class="w-full h-full object-cover opacity-90">
+                            <img src="./IRSC logo.png" alt="Logo" class="w-full h-full object-cover opacity-90" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -472,7 +473,7 @@
                     onclick="toggleExpand('rec-15')">
                     <img src="./new_updates/Event%202/Title%20Image.jpeg"
                         alt="Participants at the Mumbai Parliament of Religions 2026" class="w-full h-full object-cover"
-                        loading="lazy">
+                        loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">Mumbai Parliament of Religions 2026</h4>
@@ -494,7 +495,7 @@
                         <div class="w-full lg:w-[65%] bg-black grid place-items-center h-[300px] lg:h-full">
                             <img id="hero-rec-15" src="./new_updates/Event%202/Title%20Image.jpeg"
                                 alt="Participants at the Mumbai Parliament of Religions 2026"
-                                class="w-full h-full object-contain" loading="lazy">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
@@ -503,87 +504,99 @@
                                     alt="Mumbai Parliament of Religions 2026 group photograph"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%281%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 2"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%282%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 3"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%283%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 4"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%284%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 5"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%285%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 6"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%286%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 7"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%287%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 8"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM%20%288%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 9"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.29%20PM.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 10"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%281%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 11"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%282%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 12"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%283%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 13"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%284%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 14"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%285%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 15"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM%20%286%29.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 16"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%202/Remaining%20Images/WhatsApp%20Image%202026-11-02%20at%201.29.30%20PM.jpeg"
                                     alt="Mumbai Parliament of Religions 2026 event photograph 17"
                                     onclick="swapImg('rec-15', this)"
                                     class="w-10 h-10 rounded border-2 border-transparent object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
+                                <div class="flex items-center gap-4 ml-auto">
+                                    <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-[#E4405F] hover:scale-125 transition-transform duration-300"
+                                        aria-label="Follow us on Instagram">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" viewBox="0 0 448 512">
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
 
                             <div class="p-8">
@@ -599,7 +612,7 @@
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-14')">
                     <img src="./new_updates/Event%201/EID%20Milan%201.jpeg" alt="EID Milan event photo 1"
-                        class="w-full h-full object-cover" loading="lazy">
+                        class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">EID Milan</h4>
@@ -621,7 +634,7 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-14" src="./new_updates/Event%201/EID%20Milan%201.jpeg"
-                                alt="EID Milan event photo 1" class="w-full h-full object-contain" loading="lazy">
+                                alt="EID Milan event photo 1" class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div
@@ -630,23 +643,28 @@
                                 <img src="./new_updates/Event%201/EID%20Milan%201.jpeg" alt="EID Milan photo 1"
                                     onclick="swapImg('rec-14', this)"
                                     class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%201/EID%20Milan%202.jpeg" alt="EID Milan photo 2"
                                     onclick="swapImg('rec-14', this)"
                                     class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                                 <img src="./new_updates/Event%201/EID%20Milan%203.jpeg" alt="EID Milan photo 3"
                                     onclick="swapImg('rec-14', this)"
                                     class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer"
-                                    loading="lazy">
+                                    loading="lazy" decoding="async">
                             </div>
                             <div class="p-8 flex items-center justify-between gap-4">
                                 <h3 class="font-serif text-3xl text-slate-900">EID Milan</h3>
                                 <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
                                     rel="noopener noreferrer"
-                                    class="shrink-0 text-sm font-bold text-indigo-700 hover:underline"
-                                    aria-label="View EID Milan photos on IRSC Mumbai Instagram">Instagram
-                                    <span aria-hidden="true">↗</span></a>
+                                    class="shrink-0 text-[#E4405F] hover:scale-125 transition-transform duration-300"
+                                    aria-label="Follow IRSC Mumbai on Instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        fill="currentColor" viewBox="0 0 448 512">
+                                        <path
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 7.8 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -656,7 +674,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-13">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-13')">
-                    <img src="./Events/compressed_images/optimized_50.jpeg" class="w-full h-full object-cover">
+                    <img src="./Events/compressed_images/optimized_50.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Conclave of Religions 2026</h4>
@@ -678,147 +696,147 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-13" src="./Events/compressed_images/optimized_50.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
 
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                                 <img src="./Events/compressed_images/optimized_1.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_2.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_3.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_4.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_5.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_6.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_7.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_8.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_9.jpeg" onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_10.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_11.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_12.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_13.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_14.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_15.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_16.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_17.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_18.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_19.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_20.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_21.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_22.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_23.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_24.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_25.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_26.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_27.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_28.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_29.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_30.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_31.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_32.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_33.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_34.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_35.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_36.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_37.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_38.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_39.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_40.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_41.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_42.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_43.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_44.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_45.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_46.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_47.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./Events/compressed_images/optimized_48.jpeg"
                                     onclick="swapImg('rec-13', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -848,7 +866,7 @@
 
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-1')">
-                    <img src="images/events/event-1/image-1.jpg" class="w-full h-full object-cover">
+                    <img src="images/events/event-1/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">Interfaith Holi-Easter-Ramadan</h4>
@@ -871,7 +889,7 @@
                         <div
                             class="w-full lg:w-[65%] bg-black flex items-center justify-center overflow-hidden h-[300px] lg:h-full">
                             <img id="hero-rec-1" src="images/events/event-1/image-1.jpg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 h-full">
@@ -879,9 +897,9 @@
                             <div class="p-4 border-b border-slate-50 flex flex-wrap gap-2 items-center bg-slate-50/50">
                                 <div class="flex gap-1.5">
                                     <img src="images/events/event-1/image-1.jpg" onclick="swapImg('rec-1', this)"
-                                        class="w-8 h-8 lg:w-10 lg:h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:scale-105 transition-transform">
+                                        class="w-8 h-8 lg:w-10 lg:h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:scale-105 transition-transform" loading="lazy" decoding="async">
                                     <img src="images/events/event-1/image-2.jpg" onclick="swapImg('rec-1', this)"
-                                        class="w-8 h-8 lg:w-10 lg:h-10 rounded border-2 border-transparent object-cover cursor-pointer hover:scale-105 transition-transform">
+                                        class="w-8 h-8 lg:w-10 lg:h-10 rounded border-2 border-transparent object-cover cursor-pointer hover:scale-105 transition-transform" loading="lazy" decoding="async">
                                 </div>
 
                                 <div class="flex items-center gap-4 ml-auto">
@@ -914,7 +932,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-2">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-2')">
-                    <img src="./images/events/events-2/image-1.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-2/image-1.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Advisory Committee Meeting</h4>
@@ -935,15 +953,15 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-2" src="./images/events/events-2/image-1.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-2/image-1.jpeg" onclick="swapImg('rec-2', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-2/image-2.jpeg" onclick="swapImg('rec-2', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -977,7 +995,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-3">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-3')">
-                    <img src="./images/events/events-3/image-1.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-3/image-1.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC event 14 October 2023</h4>
@@ -996,20 +1014,20 @@
                         </button>
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-3" src="./images/events/events-3/image-1.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-3/image-1.jpeg" onclick="swapImg('rec-3', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-3/image-2.jpeg" onclick="swapImg('rec-3', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-3/image-3.jpeg" onclick="swapImg('rec-3', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-3/image-4.jpeg" onclick="swapImg('rec-3', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-3/image-5.jpeg" onclick="swapImg('rec-3', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
                                         rel="noopener noreferrer"
@@ -1038,7 +1056,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-4">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-4')">
-                    <img src="./images/events/event-4/image-1.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/event-4/image-1.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Event 18-9-2024</h4>
@@ -1057,14 +1075,14 @@
                         </button>
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-4" src="./images/events/event-4/image-1.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/event-4/image-1.jpeg" onclick="swapImg('rec-4', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/event-4/image-2.jpeg" onclick="swapImg('rec-4', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
                                         rel="noopener noreferrer"
@@ -1093,7 +1111,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-6">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-6')">
-                    <img src="./images/events/events-6/image-1.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-6/image-1.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Event-21-03-2025</h4>
@@ -1114,19 +1132,19 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-6" src="./images/events/events-6/image-1.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-6/image-1.jpeg" onclick="swapImg('rec-6', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity" loading="lazy" decoding="async">
                                 <img src="./images/events/events-6/image-2.jpeg" onclick="swapImg('rec-6', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity" loading="lazy" decoding="async">
                                 <img src="./images/events/events-6/image-6.jpeg" onclick="swapImg('rec-6', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity" loading="lazy" decoding="async">
                                 <img src="./images/events/events-6/image-7.jpeg" onclick="swapImg('rec-6', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer hover:opacity-80 transition-opacity" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1157,7 +1175,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-7">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-7')">
-                    <img src="./images/events/events-7/image-3.jpg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-7/image-3.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Pahalgam Attack Prayer Meeting</h4>
@@ -1178,19 +1196,19 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-7" src="./images/events/events-7/image-3.jpg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-7/image-1.jpg" onclick="swapImg('rec-7', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-7/image-2.jpg" onclick="swapImg('rec-7', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-7/image-3.jpg" onclick="swapImg('rec-7', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-7/image-4.jpg" onclick="swapImg('rec-7', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1224,7 +1242,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-8">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-8')">
-                    <img src="./images/events/events-8/image-1.jpg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-8/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC-Event 15 July 2023</h4>
@@ -1245,19 +1263,19 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-8" src="./images/events/events-8/image-1.jpg"
-                                class=" w-full h-full object-contain">
+                                class=" w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-8/image-1.jpg" onclick="swapImg('rec-8', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-8/image-2.jpg" onclick="swapImg('rec-8', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-8/image-3.jpg" onclick="swapImg('rec-8', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-8/image-4.jpg" onclick="swapImg('rec-8', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1284,7 +1302,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-9">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-9')">
-                    <img src="./images/events/events-9/image-4.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-9/image-4.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">Love - The Essence of All Religions</h4>
@@ -1305,25 +1323,25 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-9" src="./images/events/events-9/image-4.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                                 <img src="./images/events/events-9/image-1.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-2.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-3.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-4.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-5.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-6.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-9/image-7.jpeg" onclick="swapImg('rec-9', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1353,7 +1371,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-10">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-10')">
-                    <img src="./images/events/events-10/image-1.jpeg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-10/image-1.jpeg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">Mumbai Parliament of Religions</h4>
@@ -1374,31 +1392,31 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-10" src="./images/events/events-10/image-1.jpeg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                                 <img src="./images/events/events-10/image-1.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-2.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-3.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-4.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-5.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-6.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-7.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-8.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-9.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-10/image-10.jpeg" onclick="swapImg('rec-10', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1429,7 +1447,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-11">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-11')">
-                    <img src="./images/events/events-11/image-1.jpg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-11/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">Press Conference Condemning Delhi Red Fort
@@ -1451,33 +1469,33 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-11" src="./images/events/events-11/image-1.jpg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                                 <img src="./images/events/events-11/image-1.jpg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-2.jpg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-3.jpg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-4.jpg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-5.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-6.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-7.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-8.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-9.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-10.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-11/image-11.jpeg" onclick="swapImg('rec-11', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1507,7 +1525,7 @@
             <div class="gallery-item bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm" id="rec-12">
                 <div class="preview-trigger cursor-pointer relative aspect-[4/5] overflow-hidden"
                     onclick="toggleExpand('rec-12')">
-                    <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                         <h4 class="text-white font-serif text-sm md:text-lg">IRSC Event 20 July 2024</h4>
@@ -1528,17 +1546,17 @@
 
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-12" src="./images/events/events-5/image-1.jpg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
 
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                                 <img src="./images/events/events-5/image-1.jpg" onclick="swapImg('rec-12', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-5/image-2.jpg" onclick="swapImg('rec-12', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-5/image-3.jpg" onclick="swapImg('rec-12', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1566,7 +1584,7 @@
                 id="rec-5">
             <div class="preview-trigger cursor-pointer relative lg:h-[450px] aspect-[16/9] lg:aspect-auto overflow-hidden bg-slate-100"
                 onclick="toggleExpand('rec-5')">
-                <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover">
+                <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                 <div
                     class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
                     <h4 class="text-white font-serif text-xl border-b border-white/20 pb-2">
@@ -1589,18 +1607,18 @@
 
                     <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                         <img id="hero-rec-5" src="./images/events/events-5/image-1.jpg"
-                            class="w-full h-full object-contain">
+                            class="w-full h-full object-contain" loading="lazy" decoding="async">
                     </div>
 
                     <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
 
                         <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50 flex-wrap">
                             <img src="./images/events/events-5/image-1.jpg" onclick="swapImg('rec-5', this)"
-                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                             <img src="./images/events/events-5/image-2.jpg" onclick="swapImg('rec-5', this)"
-                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                             <img src="./images/events/events-5/image-3.jpg" onclick="swapImg('rec-5', this)"
-                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
 
                             <div class="flex items-center gap-4 ml-auto">
                                 <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
@@ -1636,7 +1654,7 @@
                 id="rec-5">
                 <div class="preview-trigger cursor-pointer relative lg:h-[450px] aspect-[16/9] lg:aspect-auto overflow-hidden bg-slate-100"
                     onclick="toggleExpand('rec-5')">
-                    <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover">
+                    <img src="./images/events/events-5/image-1.jpg" class="w-full h-full object-cover" loading="lazy" decoding="async">
                     <div
                         class="absolute inset-0 bg-slate-900/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
                         <h4 class="text-white font-serif text-xl border-b border-white/20 pb-2">IRSC Event 20 july 2024
@@ -1656,16 +1674,16 @@
                         </button>
                         <div class="w-full lg:w-[65%] bg-black flex items-center justify-center">
                             <img id="hero-rec-5" src="./images/events/events-5/image-1.jpg"
-                                class="w-full h-full object-contain">
+                                class="w-full h-full object-contain" loading="lazy" decoding="async">
                         </div>
                         <div class="w-full lg:w-[35%] flex flex-col bg-white border-l border-slate-100 overflow-y-auto">
                             <div class="p-6 border-b border-slate-50 flex gap-2 items-center bg-slate-50/50">
                                 <img src="./images/events/events-5/image-1.jpg" onclick="swapImg('rec-5', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-5/image-2.jpg" onclick="swapImg('rec-5', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <img src="./images/events/events-5/image-3.jpg" onclick="swapImg('rec-5', this)"
-                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer">
+                                    class="w-10 h-10 rounded border-2 border-purple-600 object-cover cursor-pointer" loading="lazy" decoding="async">
                                 <div class="flex items-center gap-4 ml-auto">
                                     <a href="https://www.instagram.com/irsc_mumbai" target="_blank"
                                         rel="noopener noreferrer"
@@ -1977,7 +1995,7 @@
                         <div
                             class="p-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm flex items-center justify-center shrink-0 aspect-square">
                             <img src="IRSC logo.png" alt="Logo"
-                                class="h-14 w-14 min-w-[3.5rem] min-h-[3.5rem] object-cover rounded-full">
+                                class="h-14 w-14 min-w-[3.5rem] min-h-[3.5rem] object-cover rounded-full" loading="lazy" decoding="async">
                         </div>
                         <div class="flex flex-col">
                             <h5 class="text-lg font-bold tracking-tight leading-tight text-white">

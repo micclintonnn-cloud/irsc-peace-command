@@ -91,6 +91,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./image-loading.css">
 </head>
 
 <body class="bg-[#fdfbf7] text-slate-900 font-sans leading-relaxed">
@@ -284,7 +285,7 @@
             <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-3 group">
                     <img src="IRSC logo.png" alt="IRSC Mumbai Logo"
-                        class="h-14 w-14 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-105">
+                        class="h-14 w-14 md:h-14 md:w-14 object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy" decoding="async">
 
                     <div class="flex flex-col">
                         <span
@@ -363,7 +364,7 @@
                         <div class="absolute inset-0 bg-emerald-500/10 rounded-full blur-lg"></div>
                         <div
                             class="relative w-14 h-14 bg-slate-900 border border-white/5 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src="./IRSC logo.png" alt="Logo" class="w-full h-full object-cover opacity-90">
+                            <img src="./IRSC logo.png" alt="Logo" class="w-full h-full object-cover opacity-90" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -687,12 +688,38 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-12">
+                <a href="./new_updates/Event%202/Statement%20of%20the%20Mumbai%20Parliament%20of%20Religions%202026.pdf"
+                    target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer block">
+                    <div
+                        class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
+                        <img src="./new_updates/Event%202/Title%20Image.jpeg"
+                            alt="Participants at the Mumbai Parliament of Religions 2026"
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <span class="text-[9px] font-black text-orange-700 uppercase tracking-widest">Latest Event · October 31, 2026</span>
+                    <h5 class="font-serif text-xl mt-2 font-bold text-indigo-950/90">Mumbai Parliament of Religions 2026</h5>
+                </a>
+
+                <a href="./new_updates/Event%201/IRSC_%20From%20Faith%20To%20Action-%20A%20shared%20call%20for%20Justice,%20Equality%20and%20Human%20Dignity%2029th%20August%202026.pdf"
+                    target="_blank" rel="noopener noreferrer" class="relative group cursor-pointer block">
+                    <div
+                        class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
+                        <img src="./new_updates/Event%201/EID%20Milan%201.jpeg"
+                            alt="From Faith to Action event on August 29, 2026"
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                            loading="lazy" decoding="async">
+                    </div>
+                    <span class="text-[9px] font-black text-indigo-700 uppercase tracking-widest">August 29, 2026</span>
+                    <h5 class="font-serif text-xl mt-2 font-bold text-indigo-950/90">From Faith to Action: A Shared Call for Justice, Equality and Human Dignity</h5>
+                </a>
+
                 <a href="./donation/Inter-faith Holi Easter and Ramadan 2024.pdf"
                     class="relative group cursor-pointer block">
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/event-1.jpg" alt="Interfaith Holi"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-orange-700 uppercase tracking-widest">Interfaith Youth
                         Dialogue</span>
@@ -704,7 +731,7 @@
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/event-2.jpg" alt="Prayer Meeting"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-blue-700 uppercase tracking-widest">Solidarity &
                         Peace</span>
@@ -717,7 +744,7 @@
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/event-3.jpeg" alt="Spiritual Reflection"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-green-700 uppercase tracking-widest">Spiritual
                         Reflection</span>
@@ -730,7 +757,7 @@
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/events/events-3/image-5.jpeg" alt="Freedom of Religion"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-green-700 uppercase tracking-widest">Interfaith
                         Dialogue</span>
@@ -742,7 +769,7 @@
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/events/events-2/image-3.jpg" alt="Committee Meeting"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-green-700 uppercase tracking-widest">Committee
                         Consultation</span>
@@ -755,7 +782,7 @@
                     <div
                         class="aspect-video bg-slate-200 rounded-[2.5rem] overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-all duration-500">
                         <img src="./images/events/event-4/image-2.jpeg" alt="Mumbai Parliament"
-                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                     </div>
                     <span class="text-[9px] font-black text-green-700 uppercase tracking-widest">Interfaith
                         Conference</span>
@@ -935,7 +962,7 @@
                         <div
                             class="p-2 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm flex items-center justify-center shrink-0 aspect-square">
                             <img src="IRSC logo.png" alt="Logo"
-                                class="h-14 w-14 min-w-[3.5rem] min-h-[3.5rem] object-cover rounded-full">
+                                class="h-14 w-14 min-w-[3.5rem] min-h-[3.5rem] object-cover rounded-full" loading="lazy" decoding="async">
                         </div>
                         <div class="flex flex-col">
                             <h5 class="text-lg font-bold tracking-tight leading-tight text-white">
