@@ -3,19 +3,27 @@ img {
 }
 
 @keyframes image-placeholder-shimmer {
+    from {
+        background-position: center, 200% 0;
+    }
+
     to {
-        background-position: -200% 0;
+        background-position: center, -200% 0;
     }
 }
 
-img[loading="lazy"] {
-    background-image: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
-    background-size: 200% 100%;
+img:not([data-image-state="loaded"]):not([data-image-state="error"]) {
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='none' stroke='%2364758b' stroke-width='3' stroke-linecap='round' stroke-dasharray='34 18'/%3E%3C/svg%3E"),
+        linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
+    background-repeat: no-repeat, repeat;
+    background-size: 2rem 2rem, 200% 100%;
+    background-position: center, 200% 0;
     animation: image-placeholder-shimmer 1.5s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    img[loading="lazy"] {
+    img:not([data-image-state="loaded"]):not([data-image-state="error"]) {
         animation: none;
     }
 }
