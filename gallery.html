@@ -1925,7 +1925,54 @@
     </style>
 
     <script>
+        let galleryScrollTimer = null;
+        let galleryScrollIntentHandler = null;
+
+        function clearGalleryScrollIntentHandler() {
+            if (!galleryScrollIntentHandler) {
+                return;
+            }
+
+            ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(eventName => {
+                document.removeEventListener(eventName, galleryScrollIntentHandler);
+            });
+            galleryScrollIntentHandler = null;
+        }
+
+        function cancelGalleryPositioning() {
+            if (galleryScrollTimer !== null) {
+                window.clearTimeout(galleryScrollTimer);
+                galleryScrollTimer = null;
+            }
+            clearGalleryScrollIntentHandler();
+        }
+
+        function positionExpandedCard(item) {
+            cancelGalleryPositioning();
+            galleryScrollIntentHandler = cancelGalleryPositioning;
+
+            ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach(eventName => {
+                document.addEventListener(eventName, galleryScrollIntentHandler, { passive: true });
+            });
+
+            galleryScrollTimer = window.setTimeout(() => {
+                galleryScrollTimer = null;
+                clearGalleryScrollIntentHandler();
+
+                if (!item.classList.contains('is-expanded')) {
+                    return;
+                }
+
+                const header = document.querySelector('header');
+                const headerOffset = header ? header.getBoundingClientRect().height + 16 : 16;
+                const top = item.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+                window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            }, 550);
+        }
+
         function toggleExpand(id) {
+            cancelGalleryPositioning();
             const item = document.getElementById(id);
             const allItems = document.querySelectorAll('.gallery-item');
 
@@ -1941,6 +1988,7 @@
             if (!isCurrentlyExpanded) {
                 item.classList.add('is-expanded');
                 loadExpandedImages(item);
+                positionExpandedCard(item);
             }
         }
 
